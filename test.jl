@@ -1,5 +1,14 @@
 using Pkg; Pkg.activate(".")
 using TemporalNetworks
+
+
+#Notes: using MultilayerGraph, SpectralPartition, SEBAPartition we 
+# construct class instances (like in C) that contain cool info
+# 1. For MultilayerGraph instances, say ml, ml.graph gives the graph, ml.connect gives a function that connects the list of adjacencies, this can be nonmultiplex compressed or multiplex
+# 2. For SpectralPartition instances, say sp, sp.norm gives how the Laplacian is normalized, sp.evecs gives eigenfunctions (lifted if nonmultiplex), sp.evals gives eigenvalues etc.
+# 3. For SEBAPartition instances, say seba, seba.inds gives the eigenvector indices used to create the SEBA partition, seba.vecs gives the SEBA vectors and seba.cuts gives the corresponding cut values based on normalization. 
+# All objects can be plotted using plot(...) and they will plot the corresponding graph objects. Plotting ml returns the graph, plotting sp returns the evecs and plotting seba returns the SEBA vectors with cut values.  
+
 # Block graphs
 list = [0,1,2]
 degrees = nothing
@@ -39,4 +48,5 @@ p3 = plot(partition_nonmultiplex)
 p4 = plot(partition_1)
 p5 = plot(seba_part)
 p6 = plot(seba_part_nonmultiplex)
+
 
