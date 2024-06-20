@@ -24,7 +24,7 @@ Github: https://github.com/yottoo/JuliaCommunity
 
 module JuliaCommunity
 
-using PyCall
+using PythonCall
 using DataFrames, CSV
 using Statistics, StatsBase, Random
 using Parameters, ProgressMeter, SimpleWeightedGraphs
@@ -34,8 +34,14 @@ export JuliaCommunityInstance,
         optimise_resolution, 
         plot_community
 
-const leiden = pyimport("leidenalg")
-const ig = pyimport("igraph")
+const leiden = Ref{Py}()
+const ig = Ref{Py}()
+
+function __init__()
+    leiden[] = pyimport("leidenalg")
+    ig[] = pyimport("igraph")
+end
+
 
 @with_kw mutable struct PartitionMethod
     louvain::String = "louvain"
@@ -129,18 +135,18 @@ function JuliaCommunityInstance(network::DataFrame;
     #print("\n\tBuilding the graph from the network...")
     if jc.is_directed && jc.edge_weighted
         jc.graph = SimpleWeightedDiGraph(jc.network.from, jc.network.to, jc.network.weight)
-        jc.igraph = ig.Graph(zip(jc.network.from .- 1, jc.network.to .- 1), directed=true, edge_attrs=Dict("weight" => jc.network.weight))
+        jc.igraph = ig[].Graph(zip(jc.network.from .- 1, jc.network.to .- 1), directed=true, edge_attrs=Dict("weight" => jc.network.weight))
     elseif jc.is_directed        
         jc.graph = SimpleDiGraph(jc.max_node_id)
         for i in 1:nrow(jc.network) add_edge!(jc.graph, jc.network.from[i], jc.network.to[i]) end
-        jc.igraph = ig.Graph(zip(jc.network.from .- 1, jc.network.to .- 1), directed=true)
+        jc.igraph = ig[].Graph(zip(jc.network.from .- 1, jc.network.to .- 1), directed=true)
     elseif jc.edge_weighted
         jc.graph = SimpleWeightedGraph(jc.network.from, jc.network.to, jc.network.weight)
-        jc.igraph = ig.Graph(zip(jc.network.from .- 1, jc.network.to .- 1), directed=false, edge_attrs=Dict("weight" => jc.network.weight))
+        jc.igraph = ig[].Graph(zip(jc.network.from .- 1, jc.network.to .- 1), directed=false, edge_attrs=Dict("weight" => jc.network.weight))
     else
         jc.graph = SimpleGraph(jc.max_node_id)
         for i in 1:nrow(jc.network) add_edge!(jc.graph, jc.network.from[i], jc.network.to[i]) end
-        jc.igraph = ig.Graph(zip(jc.network.from .- 1, jc.network.to .- 1), directed=false)
+        jc.igraph = ig[].Graph(zip(jc.network.from .- 1, jc.network.to .- 1), directed=false)
     end
       
     jc        
@@ -171,8 +177,8 @@ end
 _louvain:    the louvain algorithm implemented by leiden package    
 """
 function _louvain(g)
-    optimiser = leiden.Optimiser()
-    partitions = leiden.ModularityVertexPartition(g)
+    optimiser = leiden[].Optimiser()
+    partitions = leiden[].ModularityVertexPartition(g)
     partitions_agg = partitions.aggregate_partition()
     while optimiser.move_nodes(partitions) > 0
         partitions.from_coarse_partition(partitions_agg)
@@ -191,9 +197,9 @@ function discover_communities(jc::JuliaCommunityInstance; mute::Bool=true)
     
     partitions = nothing
     if jc.method == jc.methods.CPM
-        partitions = leiden.find_partition(jc.igraph, leiden.CPMVertexPartition, resolution_parameter=jc.γ)
+        partitions = leiden[].find_partition(jc.igraph, leiden[].CPMVertexPartition, resolution_parameter=jc.γ)
     elseif jc.method == jc.methods.modularity
-        partitions = leiden.find_partition(jc.igraph, leiden.ModularityVertexPartition)
+        partitions = leiden[].find_partition(jc.igraph, leiden[].ModularityVertexPartition)
     elseif jc.method == jc.methods.louvain
         partitions = _louvain(jc.igraph)
     end
@@ -203,11 +209,11 @@ function discover_communities(jc::JuliaCommunityInstance; mute::Bool=true)
     jc.n_community = length(partitions)
     if !mute println("\t\t$(jc.n_community) communities have been discovered.") end
     
-    # partitions = leiden.find_partition(g, leiden.ModularityVertexPartition, resolution_parameter=0.2)
+    # partitions = leiden[].find_partition(g, leiden[].ModularityVertexPartition, resolution_parameter=0.2)
     # The following code could not be done to Leiden community members 
     # for i in 1:length(partitions) partitions[i] .+= 1 end
     # partitions.membership .+= 1
-    jc.membership_vector = partitions.membership .+ 1
+    jc.membership_vector = pyconvert(Vector,partitions.membership) .+ 1
     # println(partitions.membership)
     
     #jc.modularity = modularity(jc.graph, jc.membership_vector)
