@@ -18,8 +18,8 @@ function leiden_slice(pn :: SpectralPartition)
                                 importance = ones(1:length(ind_active[i])))
         jc = juliac.JuliaCommunityInstance(network_compr(i), nodes = nodes_compr, node_label_field = "label", edge_weighted = true, task_series = "demo")
         juliac.set_method(jc, method = jc.methods.modularity)
-        labels_leiden =juliac.leiden.find_partition(jc.igraph, juliac.leiden.ModularityVertexPartition, n_iterations=-1, max_comm_size=50)
-        labelsSliceBySlice[ind_active[i],i] = labels_leiden.membership .+ 1
+        labels_leiden =juliac.leiden[].find_partition(jc.igraph, juliac.leiden[].ModularityVertexPartition, n_iterations=-1, max_comm_size=50)
+        labelsSliceBySlice[ind_active[i],i] = pyconvert(Vector, labels_leiden.membership) .+ 1
     end
 
     labelsSliceBySlice, stitch_slice(labelsSliceBySlice, pn.graph, pn.a)
@@ -36,7 +36,7 @@ function leiden_full(partition :: SpectralPartition{MultilayerGraph{A}, B}) wher
     end
     edges_W = edgelist(W_full)
     network = DataFrame(from = [x[1] for x in edges_W], to = [x[2] for x in edges_W], weight=[W_full[x...] for x in edges_W])
-    nodes = DataFrame(id = Array(1:mlgraph.N*mlgraph.T), label = ["$(x)" for x in 1:mlgraph.N*mlgraph.T], importance = ones(mlgraph.N*mlgraph.T))
+    nodes = DataFrame(id = Array(1:partition.graph.N*partition.graph.T), label = ["$(x)" for x in 1:partition.graph.N*partition.graph.T], importance = ones(partition.graph.N*partition.graph.T))
     jc = juliac.JuliaCommunityInstance(network, nodes=nodes, node_label_field = "label", edge_weighted=true, task_series = "demo")
     juliac.set_method(jc, method = jc.methods.modularity)
     #jc.quality = 0.9
