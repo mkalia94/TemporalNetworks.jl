@@ -42,8 +42,8 @@ jobs:
           julia --project -e '
             import Pkg; Pkg.activate(".")
             using CondaPkg
-            ENV["JULIA_CONDAPKG_BACKEND"] = "Current"
-            CondaPkg.update()'
+            CondaPkg.add_pip("igraph")
+            CondaPkg.add_pip("leidenalg")'
       - uses: julia-actions/julia-runtest@latest
       - uses: julia-actions/julia-processcoverage@v1
       - uses: codecov/codecov-action@v4
