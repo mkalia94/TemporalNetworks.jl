@@ -41,3 +41,4 @@ end
 function lift(partition :: SpectralPartition{MultilayerGraph{A}, B}) where {A <: NonMultiplex, B}
     return lift_matrix_nonmultiplex(partition.L_spat, partition.graph), lift_matrix_nonmultiplex(partition.L_temp, partition.graph)
 end
+
