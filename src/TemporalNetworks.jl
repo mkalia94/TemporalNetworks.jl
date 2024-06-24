@@ -8,6 +8,7 @@ include("struct/partition.jl")
 include("struct/seba_partition.jl")
 include("struct/block.jl")
 include("utils/utils.jl")
+include("utils/idl.jl")
 include("utils/SEBA.jl")
 include("utils/nonmultiplex.jl")
 include("utils/plot.jl")
@@ -32,7 +33,7 @@ export SEBAPartition
 export IntraBlockConnectivity, Block, BlockGraph, ScalingConnectivity, BlockGraphNonMultiplex 
 
 # Utilities
-export isspat, SEBA, cut, find_active, embed_compressed_evecs, plot, bisection
+export isspat, SEBA, cut, find_active, embed_compressed_evecs, plot, bisection, DynamicLaplacian, InflatedDynamicLaplacian
 
 # Leiden
 export leiden_slice, leiden_full
