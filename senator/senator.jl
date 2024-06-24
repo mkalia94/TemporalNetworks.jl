@@ -51,4 +51,8 @@ for i in 1:mlgraph.N, j in 1:mlgraph.T
 end
 
 # Plots, with state results
-W_state = FileIO.load("state.jld2")
+W_state = FileIO.load("state.jld2", "W")
+mlgraph_state = MultilayerGraph(W_state)
+partition_state = SpectralPartition(mlgraph_state)
+
+
