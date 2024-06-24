@@ -1,3 +1,12 @@
+
+function eigvecs_largemat(mat :: Matrix{Float64}, n :: Int64)
+    dd = 2*maximum(mat)
+    D = dd.*one(ones(size(mat)...))
+    e_vals, e_vecs, info = eigsolve(D .- mat, rand(size(D)[2]), n, :LM)
+    sum(abs2, info.normres) < 1e-10 ? (dd .- e_vals[1:n], hcat(e_vecs...)[:, 1:n]) : error("Krylov method didnt't converge.")
+end
+
+
 function (::SpatTempMatching)(mlgraph :: MultilayerGraph{T}, norm :: Normalization, L_spat :: Matrix{Float64}, L_temp :: Matrix{Float64}) where T <: Multiplex
     f = a -> (isspat(eigvecs(norm(L_spat + a^2 .* L_temp))[:,2], mlgraph.N, mlgraph.T, 0.01)) ? 1.0 : -1.0
     sol = bisection(f, 0.1, 50.0)
