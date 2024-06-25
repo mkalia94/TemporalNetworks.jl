@@ -4,19 +4,38 @@
 using Markdown
 using InteractiveUtils
 
-# ╔═╡ 3ec29f89-f8e4-4b02-8151-2b19f9694785
-using Pkg; Pkg.activate("../.")
+# ╔═╡ 812e0004-32d8-11ef-37e6-1d4b240c9a4b
+begin
+	using Pkg; Pkg.activate("../.")
+	using TemporalNetworks, Plots, FileIO, JLD2
+end
 
-# ╔═╡ 00c79aac-1670-484c-b516-0cd2ed2da044
-# Load senator network files and construct inflated dynamic Laplacian
+# ╔═╡ c558534e-c1e5-41af-93b2-69a16ebe0af9
+# Load packages for spectral partitioning, plotting and loading datasets.
 
-# ╔═╡ 06468a08-bca2-4ab4-b8b4-e789da5dfe51
-h = plot(partition); plot(h[1:5]..., size=(900,500))
+# ╔═╡ 4a7d678b-ffc0-4ece-8bbc-2eadcd02926d
+# Load datasets and construct graph and spectral partition instances.
 
-# ╔═╡ d308880d-bfe7-4501-a14c-dda42711c31d
-# From the above plot, it is clear that the first `spatial' eigenvector is the third one. We use this eigenvector to carefully reorder the vertices for clarity.
+# ╔═╡ d96268dd-5dcc-4a10-8f89-fbe12e9765c9
+begin
+	W = FileIO.load("senator.jld2","W")
+	labels_party = FileIO.load("senator.jld2","labels_party")
+    labels_state = FileIO.load("senator.jld2","labels_state")
+	
+	mlgraph= MultilayerGraph(W, connect = NonMultiplexCompressed())
+	partition = SpectralPartition(mlgraph, compute_a = RayleighBalancing(2))
+end
 
-# ╔═╡ b9d18a02-722b-46e0-bf83-123eaab88cd1
+# ╔═╡ 9ac21e96-8cb4-4f73-8605-637247ed99ef
+# Now we plot eigenvectors of the inflated dynamic Laplacian to select vectors which will induce the desired spacetime partition. 
+
+# ╔═╡ 5a598148-8abe-41ef-9239-2465a1b66231
+h = plot(partition); plot(h[1:4]...)
+
+# ╔═╡ a791feb8-88d4-47d4-81ea-c9b8faaf8497
+# Clearly evec 3 is the first `spatial' eigenvector, which we use to construct the spacetime Laplacian. First, we carefully reorder vertices according to their temporal mean values, for visual convenience.
+
+# ╔═╡ d4830a3f-cf09-4bf4-8967-3affcbafcdb4
 begin
 	evec_crit = reshape(partition.evecs[:,3],mlgraph.N, mlgraph.T)
 	sens = find_active(mlgraph)
@@ -36,110 +55,136 @@ begin
 	ordering = vcat([v .+ (i-1)*mlgraph.N for i in 1:mlgraph.T]...)
 end
 
-# ╔═╡ bd4ef6e3-9aba-4c84-ba73-10eda482bb98
-# We rearrange the vertices and the corresponding labels. For the vertices we do so only in the spectral partition instance.
+# ╔═╡ 4895258b-315f-4d3f-8d48-a8cf228b7b3e
+# We now use v and ordering from the previous cell to reorder eigenvectors, labels and the network adjacencies appropriately.
 
-# ╔═╡ cddd6ebb-601e-4d02-bc32-aa85269d16c3
-# Now we load the network of states and compute its spectral partition
-
-# ╔═╡ 1f207d66-5cc2-4272-86bc-4ef5007f2071
+# ╔═╡ 2bc2b626-f650-40b3-8252-1d979e03d5ac
 begin
-	W_state = FileIO.load("states.jld2", "W");
-	labels_statelist = FileIO.load("states.jld2", "labels");
-	mlgraph_state = MultilayerGraph(W_state);
-	partition_state = SpectralPartition(mlgraph_state)
+	partition.evecs = partition.evecs[ordering, :]
+	lab_party = labels_party[v]
+	lab_state = labels_state[v]
+    mlgraph.W = [x[v,v] for x in mlgraph.W]
 end
 
-# ╔═╡ 1cc0afcd-a1e4-47a1-9158-a3c2c2a38da1
+# ╔═╡ 3761f001-40a7-4b13-ab4e-3f5bfb2a20d1
+# We do a small preprocessing step for the party affiliations
+
+# ╔═╡ 424a0bcf-75aa-424b-a8cc-6ee1ee693313
+	for i in 1:mlgraph.N
+    	if lab_party[i] == 328
+        	lab_party[i] = 0
+    	elseif lab_party[i] == 100
+        	lab_party[i] = 1
+    	elseif lab_party[i] == 200
+        	lab_party[i] = -1
+    	end
+	end
+
+# ╔═╡ 82b79d39-8910-4f1d-9c04-cdbfbe63a060
+# Now we load the state network data and create its spectral partitioning instance
+
+# ╔═╡ e531470d-98e3-48f8-a086-35ec654a5046
+begin
+	    W_state = FileIO.load("state.jld2", "W");
+	    lab_statelist = FileIO.load("state.jld2", "labels");
+		mlgraph_state = MultilayerGraph(W_state);
+		partition_state = SpectralPartition(mlgraph_state)
+end
+
+# ╔═╡ 77898ce1-0e53-429d-822c-d34af5462ca9
+# Next, similar to the senator case, we plot eigenvectors of the inflated dynamic Laplacian corresponding to the state network.
+
+# ╔═╡ 14d35b45-a8a0-49d0-9c0d-4eeebbf04a45
 h_state = plot(partition_state); plot(h_state[1:4]...)
 
-# ╔═╡ c178d5f8-33e4-4ecf-8609-d0110cfebf45
-# From the above plot, it is clear that evec 2 is the first spatial eigenvector. We rearrange the state vertices such that the projections reflect a trend of strong democrat to strong republican regimes.
+# ╔═╡ bf0d84f3-8246-412c-a4df-bd3e63e6c597
+# Clearly the first spatial eigenvector is the second one (note that this is a multiplex network as opposed to the senator case). Thus we use the second eigenvector for spectral partitioning. We reorder the state vertices as well, by the magnitude of the eigenvector at the last time step.
 
-# ╔═╡ 9df8fd1e-c239-4116-8a91-083e743a8df9
+# ╔═╡ 5e0b55ab-9271-4649-b0ca-cf0a602fe98e
 begin
 	evec_crit_state = reshape(partition_state.evecs[:,2],partition_state.graph.N, partition_state.graph.T)
 	v_state = sortperm(evec_crit_state[:,end])
 end
 
-# ╔═╡ a59e9b25-9b02-4844-836c-12385fe7a6f0
+# ╔═╡ e433a557-667d-452b-b4fd-9d8f8c456dec
+# Finally, in order to compare the senator and state results, we compute the projection of the third eigenvector of the senator network onto the state network. This is done by finding the two senators corresponding to each state per time step, and assigning them the value obtained from the senator network eigenvector.
+
+# ╔═╡ ca5b9847-613f-4b2d-907d-9c1862bdf5d7
 begin
-	include("project_sens_to_state.jl")
-	state_proj = project_sens_to_state(partition, [reshape(partition.evecs[:,3], mlgraph.N, mlgraph.T),], labels_state, labels_statelist[2:end][v_state])
-	state_proj[1] .*= sqrt(200)
-	partition_state.evecs .*= sqrt(200)
+	evecs_temp = [reshape(partition.evecs[:,3], mlgraph.N, mlgraph.T),]
+    sens_ = find_active(mlgraph) 
+	state_proj = [zeros(2*length(lab_statelist[v_state]), partition.graph.T) for i in 1:length(evecs_temp)]
+	for i in 1:length(state_proj)
+    	for x in 1:length(lab_statelist[v_state]), y in 1:size(state_proj[i])[2]
+       	 	ind_ = findall(z->(z ∈ sens_[y] && lab_state[z] == lab_statelist[v_state][x]), 1:partition.graph.N)
+       	 	if length(ind_)==1
+        	    state_proj[i][(x-1)*2+1,y] = evecs_temp[i][ind_[1],y]
+       		else
+        	    state_proj[i][(x-1)*2+1:2*x,y] = evecs_temp[i][ind_[1:2], y]
+        	    # None of this accounts for states that may have more than two senators in a single congress (with incomplete terms)
+       	    end
+    	end
+	end
+	# Filter
+	for i in 1:length(state_proj)
+    	for (j,x) in enumerate(state_proj[i])
+        	if x == 0.0
+            	state_proj[i][j] = NaN
+        	end
+    	end
+	end
+	state_proj
 end
 
-# ╔═╡ a45de2ee-7cd3-4404-96be-a19279d9cb5b
-# Now we project the senator results onto the state using the project_sens_to_state function supplied with the notebook. For each state, there exist minimum two senators per time step. Thus we obtain a multiplex network of 100 senators per time step, to be compared with the state network.
+# ╔═╡ 05e5f466-2c63-4bb2-af97-ace816b72a32
+# The object `state_proj' can now be compared with the second eigenvector of the state_network
 
-# ╔═╡ 4e5da72e-a482-47f9-b1e0-fc81781bb57f
-# Finally we are ready to plot senator and state results side-by-side
+# ╔═╡ 3b358fd4-15a5-401c-9fed-9128aceefc48
+# (First, an appropriate scaling for plotting)
 
-# ╔═╡ 34906585-dc9a-4b70-982e-2c79eed68d82
+# ╔═╡ a5b645f8-0525-4752-83d2-60818f05f852
 begin
-	labelss = vcat([[x; ""] for x in labels_statelist[2:end][v_state]]...)
-	h1 = heatmap(reshape(-partition_state.evecs[:,2],mlgraph_state.N,mlgraph_state.T)[v_state,:], c=cgrad(:RdBu), size=(600,800), yticks=(1:50,labels_statelist[2:end][v_state]), xticks=(1:2:11,1987:4:2009), dpi=300, clims = (-0.84,0.84))
+	state_proj[1] .*= sqrt(200);
+	partition_state.evecs .*= sqrt(200);
+end
+
+# ╔═╡ d7dd157a-97a9-4821-8361-92defca202dc
+begin	
+	labelss = vcat([[x; ""] for x in lab_statelist[v_state]]...);
+	
+	h1 = heatmap(reshape(-partition_state.evecs[:,2],mlgraph_state.N,mlgraph_state.T)[v_state,:], c=cgrad(:RdBu), size=(600,800), yticks=(1:50,lab_statelist[v_state]), xticks=(1:2:11,1987:4:2009), dpi=300, clims = (-1,1))
+	
 	h2 = heatmap(state_proj[1], c=cgrad(:RdBu), size=(600,800), yticks=(1:100,labelss), xticks=(1:2:11,1987:4:2009), dpi=300, grid=false, clims=(-1,1))
+
 	hline!(h2,0.5:2.0:(101+0.5), c=:black, labels="", lw=1)
+	
 	plot(h1, h2, size=(900,700))
-	
 end
 
-# ╔═╡ cf22331e-7cf3-4e9b-be85-91eb80553692
-begin
-	using TemporalNetworks, Plots, FileIO, JLD2
-	
-	W = FileIO.load("senator.jld2","W")
-	labels_party = FileIO.load("senator.jld2","labels_party")
-	labels_state = FileIO.load("senator.jld2","labels_state")
-	
-	mlgraph= MultilayerGraph(W, connect = NonMultiplexCompressed())
-	partition = SpectralPartition(mlgraph, compute_a = RayleighBalancing(2))
-end
 
-# ╔═╡ 35021c84-8c90-4c1b-941d-3c1b5e4d008e
-begin
-	partition.evecs = partition.evecs[ordering, :]
-	labels_party = labels_party[v]
-	labels_state = labels_state[v]
-
-
-	for i in 1:mlgraph.N
-    	if labels_party[i] == 328
-        	labels_party[i] = 0
-    	elseif labels_party[i] == 100
-        	labels_party[i] = 1
-    	elseif labels_party[i] == 200
-        	labels_party[i] = -1
-    	end
-	end
-
-
-	labels_plot = deepcopy(evec_crit[v,:])
-
-	for i in 1:mlgraph.N, j in 1:mlgraph.T
-    	if labels_plot[i,j] != 0
-        	labels_plot[i,j] = labels_party[i]
-    	end
-	end
-end
 
 # ╔═╡ Cell order:
-# ╠═00c79aac-1670-484c-b516-0cd2ed2da044
-# ╠═3ec29f89-f8e4-4b02-8151-2b19f9694785
-# ╠═cf22331e-7cf3-4e9b-be85-91eb80553692
-# ╠═06468a08-bca2-4ab4-b8b4-e789da5dfe51
-# ╠═d308880d-bfe7-4501-a14c-dda42711c31d
-# ╠═b9d18a02-722b-46e0-bf83-123eaab88cd1
-# ╠═bd4ef6e3-9aba-4c84-ba73-10eda482bb98
-# ╠═35021c84-8c90-4c1b-941d-3c1b5e4d008e
-# ╠═cddd6ebb-601e-4d02-bc32-aa85269d16c3
-# ╠═1f207d66-5cc2-4272-86bc-4ef5007f2071
-# ╠═1cc0afcd-a1e4-47a1-9158-a3c2c2a38da1
-# ╠═c178d5f8-33e4-4ecf-8609-d0110cfebf45
-# ╠═9df8fd1e-c239-4116-8a91-083e743a8df9
-# ╠═a45de2ee-7cd3-4404-96be-a19279d9cb5b
-# ╠═a59e9b25-9b02-4844-836c-12385fe7a6f0
-# ╠═4e5da72e-a482-47f9-b1e0-fc81781bb57f
-# ╠═34906585-dc9a-4b70-982e-2c79eed68d82
+# ╠═c558534e-c1e5-41af-93b2-69a16ebe0af9
+# ╠═812e0004-32d8-11ef-37e6-1d4b240c9a4b
+# ╠═4a7d678b-ffc0-4ece-8bbc-2eadcd02926d
+# ╠═d96268dd-5dcc-4a10-8f89-fbe12e9765c9
+# ╠═9ac21e96-8cb4-4f73-8605-637247ed99ef
+# ╠═5a598148-8abe-41ef-9239-2465a1b66231
+# ╠═a791feb8-88d4-47d4-81ea-c9b8faaf8497
+# ╠═d4830a3f-cf09-4bf4-8967-3affcbafcdb4
+# ╠═4895258b-315f-4d3f-8d48-a8cf228b7b3e
+# ╠═2bc2b626-f650-40b3-8252-1d979e03d5ac
+# ╠═3761f001-40a7-4b13-ab4e-3f5bfb2a20d1
+# ╠═424a0bcf-75aa-424b-a8cc-6ee1ee693313
+# ╠═82b79d39-8910-4f1d-9c04-cdbfbe63a060
+# ╠═e531470d-98e3-48f8-a086-35ec654a5046
+# ╠═77898ce1-0e53-429d-822c-d34af5462ca9
+# ╠═14d35b45-a8a0-49d0-9c0d-4eeebbf04a45
+# ╠═bf0d84f3-8246-412c-a4df-bd3e63e6c597
+# ╠═5e0b55ab-9271-4649-b0ca-cf0a602fe98e
+# ╠═e433a557-667d-452b-b4fd-9d8f8c456dec
+# ╠═ca5b9847-613f-4b2d-907d-9c1862bdf5d7
+# ╠═05e5f466-2c63-4bb2-af97-ace816b72a32
+# ╠═3b358fd4-15a5-401c-9fed-9128aceefc48
+# ╠═a5b645f8-0525-4752-83d2-60818f05f852
+# ╠═d7dd157a-97a9-4821-8361-92defca202dc
