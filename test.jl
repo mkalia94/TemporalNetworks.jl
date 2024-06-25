@@ -44,9 +44,9 @@ seba_part  = SEBAPartition(partition_1)
 
 p1 = plot(mlgraph, 1)
 p2 = plot(mlgraph_nonmultiplex, 1)
-p3 = plot(partition_nonmultiplex)
-p4 = plot(partition_1)
-p5 = plot(seba_part)
-p6 = plot(seba_part_nonmultiplex)
+p3_1, p3_2 = plot(partition_nonmultiplex)
+p4_1, p4_2 = plot(partition_1)
+p5_1, p5_2 = plot(seba_part)
+p6_1 = plot(seba_part_nonmultiplex)
 
 
