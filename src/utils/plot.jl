@@ -91,15 +91,20 @@ end
 
 
 function plot(spart :: SEBAPartition{MultilayerGraph{T}, N}; kwargs...) where {T<: Multiplex, N}
-    _plot_SEBA_trend(spart, 5), _plot_SEBA(spart)
+    _plot_SEBA(spart), _plot_SEBA_trend(spart, 5)
 end
 
 function plot(spart :: SEBAPartition{MultilayerGraph{T}, N}, R :: Int64; kwargs...) where {T <: Multiplex, N}
-    _plot_SEBA_trend(spart, R), _plot_SEBA(spart)
+    _plot_SEBA(spart), _plot_SEBA_trend(spart, R)
 end
 
 function plot(spart :: SEBAPartition{MultilayerGraph{T}, N}; kwargs...) where {T<: NonMultiplex, N}
     _plot_SEBA(spart)
+end
+
+function plot(spart :: SEBAPartition{MultilayerGraph{T}, N}, good_SEBA :: Vector{Int64}; kwargs...) where {T, N}
+    p, _, _ = _plot_SEBA_heatmapmax(spart, good_SEBA)
+    p
 end
 
 function _plot_SEBA(spart:: SEBAPartition{MultilayerGraph{T}, N}; kwargs...) where {T, N}
@@ -129,3 +134,34 @@ function _plot_SEBA_trend(seba_part :: SEBAPartition{MultilayerGraph{T},N}, R) w
     plot!(p_cuts, means, label="", c=:black)
     p_cuts
 end
+
+function _plot_SEBA_heatmapmax(spart :: SEBAPartition, good_SEBA :: Vector{Int64})
+    N = spart.partition.graph.N
+    T = spart.partition.graph.T
+    max_vals, max_inds = findmax(spart.vecs[:,good_SEBA], dims=2)
+    max_vals = reshape(max_vals, N,T)
+    max_inds = reshape([x[2] for x in max_inds], N, T)
+    p = nothing
+    vals = []
+    for i in 1:length(good_SEBA)
+        vals_temp = zeros(N, T); vals_temp .= NaN
+        vals_temp[findall(x->x==i, max_inds)] = max_vals[findall(x->x==i, max_inds)]
+        if i == 1
+            p = heatmap(vals_temp, c= cgrad([:white, color_vector(1)], [0.0,1.0]), dpi=300)
+        else
+            heatmap!(vals_temp, c= cgrad([:white, color_vector(i)], [0.0,1.0]), dpi=300)
+        end
+
+        push!(vals, vals_temp)
+    end
+   
+    for i in 1:N, j in 1:T
+        v = [vals[k][i,j] for k in 1:length(vals)]
+        if sum(v .> 0.0) == 0
+            max_inds[i,j] = 0
+        end
+    end
+
+    p, vals, max_inds
+end
+
