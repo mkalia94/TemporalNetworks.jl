@@ -16,7 +16,7 @@ This will install the required packages and also install the required Python pac
 
 A multiplex graph can be supplied as a vector of `Float64` matrices or by using the `BlockGraph` instance to build temporal networks.
 
-```@docs
+```
 TemporalNetworks.BlockGraph
 ```
 
@@ -37,7 +37,7 @@ returns `W1`, a `Vector{Matrix{Float64}}` containing adjacency matries ordered i
 
 The `MultilayerGraph` instance builds a temporal network using a connection rule, of type `TemporalConnectivity`. The default is `Multiplex`.
 
-```@docs
+```
 TemporalNetworks.MultilayerGraph
 ```
 
@@ -46,13 +46,13 @@ mlgraph = MultilayerGraph(W1, connect = Multiplex())
 ```
  One can visualize say the final layer using `plot(mlgraph,17)`
 
-![]("figs/graph.png")
+![](figs/graph.png)
 
 ## Spectral Partitions and SEBA
 
 The `SpectralPartition` and `SEBAPartition` are the most important instances that compute spectral partitions using supra-Laplacians and the SEBA algorithm.
 
-```@docs
+```
 TemporalNetworks.SpectralPartition
 TemporalNetworks.SEBAPartition
 ```
