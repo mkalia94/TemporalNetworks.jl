@@ -30,7 +30,7 @@ end
 """
     BlockGraphNonMultiplex(N :: Int64, T :: Int64, list :: Vector, η :: Float64, clusters :: Union{Nothing, Vector}, degrees :: Union{Nothing, Vector}, interaction :: IntraBlockConnectivity, evolve :: Int64)
 
-Non-multiplex type staircase graph instance. Constructs a temporal network of `N`spatial vertices `\\bigcup_{t=1}^T\\{x: (t,x)\\in\\mathcal{V}\\}`` with `T` time steps. 
+Non-multiplex type staircase graph instance. Constructs a temporal network of `N`spatial vertices ``\\bigcup_{t=1}^T\\{x: (t,x)\\in\\mathcal{V}\\}`` with `T` time steps. 
 
 The transition types are encoded in `list` which is a `Vector{Int64}`. Numbers indicate number of disjoint clusters to be constructed at certain time points. `clusters` and `degrees` hold information about which vertices belong to which clusters and the cluster degrees respectively (the clusters are regular subgraphs). 
 

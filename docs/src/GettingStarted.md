@@ -16,25 +16,27 @@ This will install the required packages and also install the required Python pac
 
 A multiplex graph can be supplied as a vector of `Float64` matrices or by using the `BlockGraph` instance to build temporal networks.
 
-For example running the following,
+Here is a simple example that constructs and analyses a simple multiplex graph,
 
 ```@repl
 using TemporalNetworks
-list = [0,2]
-degrees = nothing
-η = 0.8
-clusters = nothing
+list = [0,2]; degrees = nothing; η = 0.8; clusters = nothing
 block = BlockGraph(20, 15, list, η, clusters, degrees)
-W1 = block()
+W1 = block();
+mlgraph = MultilayerGraph(W1, connect = Multiplex())
+partition = SpectralPartition(mlgraph)
+seba_part = SEBAPartition(partition,2)
 ```
 
-returns `W1`, a `Vector{Matrix{Float64}}` containing adjacency matries ordered in time corresponding to ``20`` vertices each with transition from unclustered to the emergence of two fully intraconnected clusters.
+We break down the code below. 
 
 ## Building a Temporal Network
 
+`block()` returns `W1`, a `Vector{Matrix{Float64}}` containing adjacency matries ordered in time corresponding to ``20`` vertices each with transition from unclustered to the emergence of two fully intraconnected clusters.
+
 The `MultilayerGraph` instance builds a temporal network using a connection rule, of type `TemporalConnectivity`. The default is `Multiplex`.
 
-```@repl
+```@julia
 mlgraph = MultilayerGraph(W1, connect = Multiplex())
 ```
  One can visualize say the final layer using `plot(mlgraph,17)`
@@ -47,7 +49,7 @@ The `SpectralPartition` and `SEBAPartition` are the most important instances tha
 
 To compute a spectral partition simply run,
 
-```@repl
+```@julia
 partition = SpectralPartition(mlgraph)
 ```
 
@@ -70,7 +72,7 @@ plot(p2)
 The eigenvectors 2 and 4 store (corresponding to the first two nontrivial spatial eigenvectors) important information about the partition. The partition elements embedded in the eigenvectors `evecs` are disentangled using the SEBA algorithm as follows,
 
 
-```@repl
+```@julia
 seba_part = SEBAPartition(partition,2)
 ```
 
