@@ -1,7 +1,9 @@
-libdir=/Users/manu/.julia/dev/TemporalNetworks/.CondaPkg/env/lib
-includedir=/Users/manu/.julia/dev/TemporalNetworks/.CondaPkg/env/include
-enginesdir=/Users/manu/.julia/dev/TemporalNetworks/.CondaPkg/env/lib/engines-3
-modulesdir=/Users/manu/.julia/dev/TemporalNetworks/.CondaPkg/env/lib/ossl-modules
+prefix=/Users/manu/.julia/dev/TemporalNetworks/.CondaPkg/env
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+enginesdir=${libdir}/engines-3
+modulesdir=${libdir}/ossl-modules
 
 Name: OpenSSL-libcrypto
 Description: OpenSSL cryptography library

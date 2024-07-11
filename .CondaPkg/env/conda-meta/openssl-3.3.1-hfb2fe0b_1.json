@@ -1,8 +1,8 @@
 {
     "arch": "arm64",
-    "build": "hfb2fe0b_0",
-    "build_number": 0,
-    "build_string": "hfb2fe0b_0",
+    "build": "hfb2fe0b_1",
+    "build_number": 1,
+    "build_string": "hfb2fe0b_1",
     "channel": "https://conda.anaconda.org/conda-forge/osx-arm64",
     "constrains": [
         "pyopenssl >=22.1"
@@ -11,7 +11,7 @@
         "__osx >=11.0",
         "ca-certificates"
     ],
-    "extracted_package_dir": "/Users/manu/.julia/scratchspaces/0b3b1443-0f03-428d-bdfb-f27f9c1191ea/root/pkgs/openssl-3.3.1-hfb2fe0b_0",
+    "extracted_package_dir": "/Users/manu/.julia/scratchspaces/0b3b1443-0f03-428d-bdfb-f27f9c1191ea/root/pkgs/openssl-3.3.1-hfb2fe0b_1",
     "files": [
         "bin/c_rehash",
         "bin/openssl",
@@ -172,30 +172,30 @@
         "ssl/openssl.cnf",
         "ssl/openssl.cnf.dist"
     ],
-    "fn": "openssl-3.3.1-hfb2fe0b_0.conda",
+    "fn": "openssl-3.3.1-hfb2fe0b_1.conda",
     "license": "Apache-2.0",
     "license_family": "Apache",
     "link": {
-        "source": "/Users/manu/.julia/scratchspaces/0b3b1443-0f03-428d-bdfb-f27f9c1191ea/root/pkgs/openssl-3.3.1-hfb2fe0b_0",
+        "source": "/Users/manu/.julia/scratchspaces/0b3b1443-0f03-428d-bdfb-f27f9c1191ea/root/pkgs/openssl-3.3.1-hfb2fe0b_1",
         "type": 1
     },
-    "md5": "c4a0bbd96a0da60bf265dac62c87f4e1",
+    "md5": "c665dec48e08311096823956642a501c",
     "name": "openssl",
-    "package_tarball_full_path": "/Users/manu/.julia/scratchspaces/0b3b1443-0f03-428d-bdfb-f27f9c1191ea/root/pkgs/openssl-3.3.1-hfb2fe0b_0.tar.bz2",
+    "package_tarball_full_path": "/Users/manu/.julia/scratchspaces/0b3b1443-0f03-428d-bdfb-f27f9c1191ea/root/pkgs/openssl-3.3.1-hfb2fe0b_1.tar.bz2",
     "paths_data": {
         "paths": [
             {
                 "_path": "bin/c_rehash",
                 "path_type": "hardlink",
-                "sha256": "557ad7dfcd756d6a2a823d48889b416db43df126f01783d783b31d08fb7814d1",
+                "sha256": "63e839f06566394402ee79a77f3b25e9dc669c83d099c841aa262ba908523d53",
                 "sha256_in_prefix": "8c2f0de0f52e0316f3c69d059d1c04930d18f99a3108bf017de3c42761d34465",
                 "size_in_bytes": 7103
             },
             {
                 "_path": "bin/openssl",
                 "path_type": "hardlink",
-                "sha256": "9bb846c032a979e0d9cd7a4204cbecf7012e790f46d673eabeb0d602df52b3ce",
-                "sha256_in_prefix": "9bb846c032a979e0d9cd7a4204cbecf7012e790f46d673eabeb0d602df52b3ce",
+                "sha256": "cbc4f90525b2c8b5f9070e9556ee491ebb6b36433eb0908579ec4e2c5b9767a1",
+                "sha256_in_prefix": "cbc4f90525b2c8b5f9070e9556ee491ebb6b36433eb0908579ec4e2c5b9767a1",
                 "size_in_bytes": 896752
             },
             {
@@ -1174,9 +1174,9 @@
             {
                 "_path": "lib/cmake/OpenSSL/OpenSSLConfig.cmake",
                 "path_type": "hardlink",
-                "sha256": "0bc2eb63721f503cae06567723bed155b7b87cde8a51d597753a74e2fd026a51",
-                "sha256_in_prefix": "0bc2eb63721f503cae06567723bed155b7b87cde8a51d597753a74e2fd026a51",
-                "size_in_bytes": 5605
+                "sha256": "f8397bcd07444e1f454ec5ce043807ed7985089ca20b1914c84ac0ea500fef13",
+                "sha256_in_prefix": "f8397bcd07444e1f454ec5ce043807ed7985089ca20b1914c84ac0ea500fef13",
+                "size_in_bytes": 5563
             },
             {
                 "_path": "lib/cmake/OpenSSL/OpenSSLConfigVersion.cmake",
@@ -1188,49 +1188,49 @@
             {
                 "_path": "lib/libcrypto.3.dylib",
                 "path_type": "hardlink",
-                "sha256": "b7afc7fd4c75182dde7ac6e3c4a521edd7671f64eb5d22d23663a5e0f53a03e7",
-                "sha256_in_prefix": "273332a317a76b502cbd3746f4dac175a72dcb0e43ebb0967fd00bcc94805f64",
+                "sha256": "a1a2232d24b9a3d14bcabb5560d18f1c59cefacd2ff8b86a7480cb8aad7afd22",
+                "sha256_in_prefix": "f5d94c3e63eb70e4a9b97b6110e972f1cf9833c73e51864da4c62f791d3b152b",
                 "size_in_bytes": 4403968
             },
             {
                 "_path": "lib/libcrypto.dylib",
                 "path_type": "softlink",
-                "sha256_in_prefix": "273332a317a76b502cbd3746f4dac175a72dcb0e43ebb0967fd00bcc94805f64",
+                "sha256_in_prefix": "f5d94c3e63eb70e4a9b97b6110e972f1cf9833c73e51864da4c62f791d3b152b",
                 "size_in_bytes": 4403968
             },
             {
                 "_path": "lib/libssl.3.dylib",
                 "path_type": "hardlink",
-                "sha256": "d229751c7f686388bf91fdc4a2cc2dcbe451182de78c9c4c0235d32151dc2b61",
-                "sha256_in_prefix": "d229751c7f686388bf91fdc4a2cc2dcbe451182de78c9c4c0235d32151dc2b61",
+                "sha256": "1f3efab3c2d0804d296e50b7b2e1c3836b7a8cfcda7c6c0befa6687564e7e0a6",
+                "sha256_in_prefix": "1f3efab3c2d0804d296e50b7b2e1c3836b7a8cfcda7c6c0befa6687564e7e0a6",
                 "size_in_bytes": 921024
             },
             {
                 "_path": "lib/libssl.dylib",
                 "path_type": "softlink",
-                "sha256_in_prefix": "d229751c7f686388bf91fdc4a2cc2dcbe451182de78c9c4c0235d32151dc2b61",
+                "sha256_in_prefix": "1f3efab3c2d0804d296e50b7b2e1c3836b7a8cfcda7c6c0befa6687564e7e0a6",
                 "size_in_bytes": 921024
             },
             {
                 "_path": "lib/pkgconfig/libcrypto.pc",
                 "path_type": "hardlink",
-                "sha256": "20deb572625c5897949d40cb16c96c289a264de0e6c83cacbfe7539e89a6d994",
-                "sha256_in_prefix": "4098b61564fd32266852515064958c059421aebe1cef38f859892d88a5bdc3f8",
-                "size_in_bytes": 1255
+                "sha256": "37cdc292016ffdb4d8b33eabd8b3a63a0d85ab99f3ed16ae4835cad26a52687b",
+                "sha256_in_prefix": "baae183164f1c5bf1c99c2f606678e5e018e354419193a95b8b061f2f09048fb",
+                "size_in_bytes": 553
             },
             {
                 "_path": "lib/pkgconfig/libssl.pc",
                 "path_type": "hardlink",
-                "sha256": "d4ba0647e2e356b930e3891b236313e0e70311c9ffd2b40ffdd5b7637d253bfd",
-                "sha256_in_prefix": "5874bfe4c3aae297804e91409416627011a9c5ef9e8a847f66d50ef31840ff22",
-                "size_in_bytes": 716
+                "sha256": "ce6e8b14c67a42945e6ee4043b4bcae3830b90d5ca8c4cd735d4f586dd83fe66",
+                "sha256_in_prefix": "7080d1d719f581a883014ca5235ca6431b60edfdb1edabda2dc23dde149fd3b1",
+                "size_in_bytes": 514
             },
             {
                 "_path": "lib/pkgconfig/openssl.pc",
                 "path_type": "hardlink",
-                "sha256": "2b5d9c752461b5b0cb44fd8acf8130f1c2bafa9b8b3215faeb9dc7fbe7f4c649",
-                "sha256_in_prefix": "92abf27fe42aa46b72810c6bd3babf28f2fbc3395ce81b50fe34835ea95a80d2",
-                "size_in_bytes": 670
+                "sha256": "dd183384b23af956a64e37ecfa2674872bb9b4a20a7202b2b1af6446c874c0af",
+                "sha256_in_prefix": "72418da8f51efc5626e2eeb7f9f96f5c2ac65771856439712c46cb8726cd6e3b",
+                "size_in_bytes": 468
             },
             {
                 "_path": "ssl/certs/.keep",
@@ -1291,11 +1291,11 @@
     },
     "platform": "osx",
     "requested_spec": "",
-    "sha256": "6cb2d44f027b259be8cba2240bdf21af7b426e4132a73e0052f7173ab8b60ab0",
-    "size": 2891941,
+    "sha256": "3ab411856c3bef88595473f0dd86e82de4f913f88319548acf262d5b1175b050",
+    "size": 2897767,
     "subdir": "osx-arm64",
-    "timestamp": 1717545846389,
+    "timestamp": 1719363723462,
     "track_features": "",
-    "url": "https://conda.anaconda.org/conda-forge/osx-arm64/openssl-3.3.1-hfb2fe0b_0.conda",
+    "url": "https://conda.anaconda.org/conda-forge/osx-arm64/openssl-3.3.1-hfb2fe0b_1.conda",
     "version": "3.3.1"
 }
