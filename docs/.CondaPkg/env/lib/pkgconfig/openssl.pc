@@ -1,7 +1,0 @@
-libdir=/Users/manu/.julia/dev/TemporalNetworks/docs/.CondaPkg/env/lib
-includedir=/Users/manu/.julia/dev/TemporalNetworks/docs/.CondaPkg/env/include
-
-Name: OpenSSL
-Description: Secure Sockets Layer and cryptography libraries and tools
-Version: 3.3.1
-Requires: libssl libcrypto
