@@ -18,21 +18,22 @@ A multiplex graph can be supplied as a vector of `Float64` matrices or by using 
 
 Here is a simple example that constructs and analyses a simple multiplex graph,
 
-```@repl
+```@julia
 using TemporalNetworks
-list = [0,2]; degrees = nothing; η = 0.8; clusters = nothing
+list = [0,2]
+η = 0.8
+clusters = [[Array(1:20)], 
+            [Array(1:10), Array(11:15), Array(16:20)] ]
+degrees = [[14],
+           [5,4,4]]
 block = BlockGraph(20, 15, list, η, clusters, degrees)
-W1 = block();
-mlgraph = MultilayerGraph(W1, connect = Multiplex())
-partition = SpectralPartition(mlgraph)
-seba_part = SEBAPartition(partition,2)
+W1 = block()
 ```
 
-We break down the code below. 
+`block()` returns `W1`, a `Vector{Matrix{Float64}}` containing adjacency matries ordered in time corresponding to ``20`` vertices each with transition from unclustered to the emergence of two fully intraconnected clusters.
+
 
 ## Building a Temporal Network
-
-`block()` returns `W1`, a `Vector{Matrix{Float64}}` containing adjacency matries ordered in time corresponding to ``20`` vertices each with transition from unclustered to the emergence of two fully intraconnected clusters.
 
 The `MultilayerGraph` instance builds a temporal network using a connection rule, of type `TemporalConnectivity`. The default is `Multiplex`.
 
@@ -94,3 +95,19 @@ plot(seba_part, [1,2,3]) # 4 is removed as it is not meaningful
 ```
 
 ![](figs/heatmap.png)
+
+## Comparison with existing methods
+
+The Leiden algorithm can be called from the Python package `leidenalg` via `PyCall` as follows,
+
+```@julia
+leiden_partition = leiden_slice(partition)
+```
+
+This calls the Leiden algorithm on `partition.graph` and computes a slice-by-slice Leiden partition, which is stitched together by solving the minimum edge-weight cover problem on the super graph of clusters. Finally, the Leiden partition is plotted using,
+
+```@julia
+heatmap(leiden_partition[2], c=cgrad([:white, :orange, :red]), size=(400,300), dpi=300)
+```
+
+![](figs/leiden-slice.png)
