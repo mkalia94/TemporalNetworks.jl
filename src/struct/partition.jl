@@ -1,3 +1,12 @@
+"""
+    SpectralPartition{MG <: MultilayerGraph, N <: Normalization}(mlgraph :: MultilayerGraph; compute_a = SpatTempMatching(), norm = IdentityNormalization())
+
+Spectral partition instance for the temporal network defined by `mlgraph :: MultilayerGraph`. `mlgraph` is stored in `graph`, `norm :: Normalization` stores the Laplacian normalization function (default is `IdentityNormalization()`), `a` contains the diffusion constant, `L_temp` and `L_spat` are the temporal and spatial supra-Laplacians respectively and `evecs` and `evals` store the eigendata of the supra-Laplacian.
+
+`SpectralPartition` computes the supra-Laplacian ``\\mathbf L^{(a)} = \\mathbf L^{\\rm spat} + a^2 \\mathbf L^{\\rm temp}``, computes the appropriate value of the diffusion constant ``a`` and computes the spectrum for both multiplex and nonmultiplex type networks.
+
+Note that for nonmultiplex networks, `evecs` are lifted to ``\\mathbb R^{TN}``.
+"""
 mutable struct SpectralPartition{MG <: MultilayerGraph, N <: Normalization}
     graph :: MG
     norm :: N

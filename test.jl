@@ -10,11 +10,11 @@ using TemporalNetworks
 # All objects can be plotted using plot(...) and they will plot the corresponding graph objects. Plotting ml returns the graph, plotting sp returns the evecs and plotting seba returns the SEBA vectors with cut values.  
 
 # Block graphs
-list = [0,1,2]
+list = [0,2]
 degrees = nothing
 η = 0.8
 clusters = nothing
-block = BlockGraph(20, 10, list, η, clusters, degrees)
+block = BlockGraph(20, 15, list, η, clusters, degrees)
 W1 = block()
 
 # Block graphs nonmultiplex
@@ -44,9 +44,9 @@ seba_part  = SEBAPartition(partition_1)
 
 p1 = plot(mlgraph, 1)
 p2 = plot(mlgraph_nonmultiplex, 1)
-p3 = plot(partition_nonmultiplex)
-p4 = plot(partition_1)
-p5 = plot(seba_part)
-p6 = plot(seba_part_nonmultiplex)
+p3_1, p3_2 = plot(partition_nonmultiplex)
+p4_1, p4_2 = plot(partition_1)
+p5_1, p5_2 = plot(seba_part)
+p6_1 = plot(seba_part_nonmultiplex)
 
 

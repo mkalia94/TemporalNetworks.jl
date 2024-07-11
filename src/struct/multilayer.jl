@@ -1,14 +1,8 @@
 """
-    MultilayerGraph{M <: TemporalConnectivity}(W :: Vector{Matrix{Float64}}, N :: Union{Int64, Float64}, T :: Int64)
+    MultilayerGraph{M <: TemporalConnectivity}(W :: Vector{Matrix{Float64}}; connect = Multiplex())
 
-Creates `DiffusionEstimator` instance to compute the diffusion constant ``a`` for the supra-Laplacian arising from a non-multiplex network by matching the spatial and temproral Rayleigh quotient contributions with respect to the eigenvalue indexed by `ind`. Recommended for nonmultiplex networks. 
-
-    (rb:: RayleighBalancing)(mlgraph :: MultilayerGraph ,norm :: Normalization, L_spat :: Matrix{Float64}, L_temp :: Matrix{Float64})
-`
-
-Computes the diffusion constant ``a`` using the Rayleigh balancing criterion. See [FroylandKaliaKoltai2024] for details on this heuristic.
+The temporal network instance. Stores sequence of adjacencies `W`, nodes per layer `N`, number of layers `T` and the connectivity of abstract type `TemporalConnectivity`. Default is `Multiplex()`, other options include `NonMultiplexCompressed()`. 
 """
-
 mutable struct MultilayerGraph{M <: TemporalConnectivity}
     W :: Vector{Matrix{Float64}}
     N :: Union{Int64, Float64}

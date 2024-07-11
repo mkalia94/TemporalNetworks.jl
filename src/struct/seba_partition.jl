@@ -1,3 +1,19 @@
+"""
+    SEBAPartition{MG <: MultilayerGraph, N <: Normalization}(partition :: SpectralPartition, )
+
+SEBA partitiom instance. Stores the `SpectralPartition` instance in `partition`, supra-Laplacian eigenvector indices used in SEBA in `inds`, SEBA vectors in `vecs` and corresponding Cheeger ratios in `cuts` (depending on type of `Normalization`).
+
+`SEBAPartition` applies the SEBA algorithm to chosen/identified eigenvectors from `partition.evecs` and computes Cheeger rations.
+
+    SEBAPartition(partition :: SpectralPartition, inds :: Vector{Int64})
+
+Computes `SEBAPartition` instance using `partition.evecs[:, inds]`.
+
+    SEBAPartition(partition :: SpectralPartition, max_ind :: Int64)
+
+Computes `SEBAPartition` instance by finding `max_ind` leading non-trivial spatial eigenvectors within `partition.evecs`. Does not work with `NonMultiplex` type graphs.
+
+"""
 mutable struct SEBAPartition{MG <: MultilayerGraph, N <: Normalization}
     partition :: SpectralPartition{MG, N}
     inds :: Vector{Int64}

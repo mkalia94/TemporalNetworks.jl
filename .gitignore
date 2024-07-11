@@ -1,1 +1,7 @@
 /Manifest.toml
+/docs/build/*
+/*.jld2
+docs/.CondaPkg/*
+/*.swp
+/docs/Manifest.toml
+/.CondaPkg/*
