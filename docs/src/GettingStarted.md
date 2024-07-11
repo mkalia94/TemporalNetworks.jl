@@ -19,6 +19,7 @@ A multiplex graph can be supplied as a vector of `Float64` matrices or by using 
 For example running the following,
 
 ```@repl
+using TemporalNetworks
 list = [0,2]
 degrees = nothing
 η = 0.8
