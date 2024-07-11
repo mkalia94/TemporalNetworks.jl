@@ -4,3 +4,4 @@
 docs/.CondaPkg/*
 /*.swp
 /docs/Manifest.toml
+/.CondaPkg/*
