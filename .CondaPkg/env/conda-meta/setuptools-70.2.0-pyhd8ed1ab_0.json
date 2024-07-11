@@ -8,7 +8,7 @@
     "depends": [
         "python >=3.8"
     ],
-    "extracted_package_dir": "/Users/manu/.julia/scratchspaces/0b3b1443-0f03-428d-bdfb-f27f9c1191ea/root/pkgs/setuptools-70.1.0-pyhd8ed1ab_0",
+    "extracted_package_dir": "/Users/manu/.julia/scratchspaces/0b3b1443-0f03-428d-bdfb-f27f9c1191ea/root/pkgs/setuptools-70.2.0-pyhd8ed1ab_0",
     "files": [
         "lib/python3.12/site-packages/_distutils_hack/__init__.py",
         "lib/python3.12/site-packages/_distutils_hack/override.py",
@@ -66,12 +66,12 @@
         "lib/python3.12/site-packages/pkg_resources/_vendor/platformdirs/windows.py",
         "lib/python3.12/site-packages/pkg_resources/_vendor/zipp.py",
         "lib/python3.12/site-packages/pkg_resources/extern/__init__.py",
-        "lib/python3.12/site-packages/setuptools-70.1.0-py3.12.egg-info/PKG-INFO",
-        "lib/python3.12/site-packages/setuptools-70.1.0-py3.12.egg-info/SOURCES.txt",
-        "lib/python3.12/site-packages/setuptools-70.1.0-py3.12.egg-info/dependency_links.txt",
-        "lib/python3.12/site-packages/setuptools-70.1.0-py3.12.egg-info/entry_points.txt",
-        "lib/python3.12/site-packages/setuptools-70.1.0-py3.12.egg-info/requires.txt",
-        "lib/python3.12/site-packages/setuptools-70.1.0-py3.12.egg-info/top_level.txt",
+        "lib/python3.12/site-packages/setuptools-70.2.0-py3.12.egg-info/PKG-INFO",
+        "lib/python3.12/site-packages/setuptools-70.2.0-py3.12.egg-info/SOURCES.txt",
+        "lib/python3.12/site-packages/setuptools-70.2.0-py3.12.egg-info/dependency_links.txt",
+        "lib/python3.12/site-packages/setuptools-70.2.0-py3.12.egg-info/entry_points.txt",
+        "lib/python3.12/site-packages/setuptools-70.2.0-py3.12.egg-info/requires.txt",
+        "lib/python3.12/site-packages/setuptools-70.2.0-py3.12.egg-info/top_level.txt",
         "lib/python3.12/site-packages/setuptools/__init__.py",
         "lib/python3.12/site-packages/setuptools/_core_metadata.py",
         "lib/python3.12/site-packages/setuptools/_distutils/__init__.py",
@@ -82,6 +82,22 @@
         "lib/python3.12/site-packages/setuptools/_distutils/_macos_compat.py",
         "lib/python3.12/site-packages/setuptools/_distutils/_modified.py",
         "lib/python3.12/site-packages/setuptools/_distutils/_msvccompiler.py",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/__init__.py",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__init__.py",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/_elffile.py",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/_manylinux.py",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/_musllinux.py",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/_parser.py",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/_structures.py",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/_tokenizer.py",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/markers.py",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/metadata.py",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/py.typed",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/requirements.py",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/specifiers.py",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/tags.py",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/utils.py",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/version.py",
         "lib/python3.12/site-packages/setuptools/_distutils/archive_util.py",
         "lib/python3.12/site-packages/setuptools/_distutils/bcppcompiler.py",
         "lib/python3.12/site-packages/setuptools/_distutils/ccompiler.py",
@@ -110,6 +126,7 @@
         "lib/python3.12/site-packages/setuptools/_distutils/command/upload.py",
         "lib/python3.12/site-packages/setuptools/_distutils/compat/__init__.py",
         "lib/python3.12/site-packages/setuptools/_distutils/compat/py38.py",
+        "lib/python3.12/site-packages/setuptools/_distutils/compat/py39.py",
         "lib/python3.12/site-packages/setuptools/_distutils/config.py",
         "lib/python3.12/site-packages/setuptools/_distutils/core.py",
         "lib/python3.12/site-packages/setuptools/_distutils/cygwinccompiler.py",
@@ -125,8 +142,6 @@
         "lib/python3.12/site-packages/setuptools/_distutils/log.py",
         "lib/python3.12/site-packages/setuptools/_distutils/msvc9compiler.py",
         "lib/python3.12/site-packages/setuptools/_distutils/msvccompiler.py",
-        "lib/python3.12/site-packages/setuptools/_distutils/py38compat.py",
-        "lib/python3.12/site-packages/setuptools/_distutils/py39compat.py",
         "lib/python3.12/site-packages/setuptools/_distutils/spawn.py",
         "lib/python3.12/site-packages/setuptools/_distutils/sysconfig.py",
         "lib/python3.12/site-packages/setuptools/_distutils/text_file.py",
@@ -337,6 +352,21 @@
         "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/_macos_compat.cpython-312.pyc",
         "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/_modified.cpython-312.pyc",
         "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/_msvccompiler.cpython-312.pyc",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/__pycache__/__init__.cpython-312.pyc",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/__init__.cpython-312.pyc",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/_elffile.cpython-312.pyc",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/_manylinux.cpython-312.pyc",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/_musllinux.cpython-312.pyc",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/_parser.cpython-312.pyc",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/_structures.cpython-312.pyc",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/_tokenizer.cpython-312.pyc",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/markers.cpython-312.pyc",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/metadata.cpython-312.pyc",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/requirements.cpython-312.pyc",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/specifiers.cpython-312.pyc",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/tags.cpython-312.pyc",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/utils.cpython-312.pyc",
+        "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/version.cpython-312.pyc",
         "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/archive_util.cpython-312.pyc",
         "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/bcppcompiler.cpython-312.pyc",
         "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/ccompiler.cpython-312.pyc",
@@ -365,6 +395,7 @@
         "lib/python3.12/site-packages/setuptools/_distutils/command/__pycache__/upload.cpython-312.pyc",
         "lib/python3.12/site-packages/setuptools/_distutils/compat/__pycache__/__init__.cpython-312.pyc",
         "lib/python3.12/site-packages/setuptools/_distutils/compat/__pycache__/py38.cpython-312.pyc",
+        "lib/python3.12/site-packages/setuptools/_distutils/compat/__pycache__/py39.cpython-312.pyc",
         "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/config.cpython-312.pyc",
         "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/core.cpython-312.pyc",
         "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/cygwinccompiler.cpython-312.pyc",
@@ -380,8 +411,6 @@
         "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/log.cpython-312.pyc",
         "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/msvc9compiler.cpython-312.pyc",
         "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/msvccompiler.cpython-312.pyc",
-        "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/py38compat.cpython-312.pyc",
-        "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/py39compat.cpython-312.pyc",
         "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/spawn.cpython-312.pyc",
         "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/sysconfig.cpython-312.pyc",
         "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/text_file.cpython-312.pyc",
@@ -516,17 +545,17 @@
         "lib/python3.12/site-packages/setuptools/__pycache__/wheel.cpython-312.pyc",
         "lib/python3.12/site-packages/setuptools/__pycache__/windows_support.cpython-312.pyc"
     ],
-    "fn": "setuptools-70.1.0-pyhd8ed1ab_0.conda",
+    "fn": "setuptools-70.2.0-pyhd8ed1ab_0.conda",
     "license": "MIT",
     "license_family": "MIT",
     "link": {
-        "source": "/Users/manu/.julia/scratchspaces/0b3b1443-0f03-428d-bdfb-f27f9c1191ea/root/pkgs/setuptools-70.1.0-pyhd8ed1ab_0",
+        "source": "/Users/manu/.julia/scratchspaces/0b3b1443-0f03-428d-bdfb-f27f9c1191ea/root/pkgs/setuptools-70.2.0-pyhd8ed1ab_0",
         "type": 1
     },
-    "md5": "258e66f95f814d51ada2a1fe9274039b",
+    "md5": "10170a48c48cfe65eab923f76f982087",
     "name": "setuptools",
     "noarch": "python",
-    "package_tarball_full_path": "/Users/manu/.julia/scratchspaces/0b3b1443-0f03-428d-bdfb-f27f9c1191ea/root/pkgs/setuptools-70.1.0-pyhd8ed1ab_0.tar.bz2",
+    "package_tarball_full_path": "/Users/manu/.julia/scratchspaces/0b3b1443-0f03-428d-bdfb-f27f9c1191ea/root/pkgs/setuptools-70.2.0-pyhd8ed1ab_0.tar.bz2",
     "paths_data": {
         "paths": [
             {
@@ -553,9 +582,9 @@
             {
                 "_path": "lib/python3.12/site-packages/pkg_resources/__init__.py",
                 "path_type": "hardlink",
-                "sha256": "7e52f5390e209dde04f0f602841bf42ff63442e8494e09fbab5bb2f3e6ffcbce",
-                "sha256_in_prefix": "7e52f5390e209dde04f0f602841bf42ff63442e8494e09fbab5bb2f3e6ffcbce",
-                "size_in_bytes": 119037
+                "sha256": "da8eb274099b1b626b3224ea079d7f15b3fb1bc8c9357e8be99f1854572d11f5",
+                "sha256_in_prefix": "da8eb274099b1b626b3224ea079d7f15b3fb1bc8c9357e8be99f1854572d11f5",
+                "size_in_bytes": 124456
             },
             {
                 "_path": "lib/python3.12/site-packages/pkg_resources/_vendor/__init__.py",
@@ -909,47 +938,47 @@
             {
                 "_path": "lib/python3.12/site-packages/pkg_resources/extern/__init__.py",
                 "path_type": "hardlink",
-                "sha256": "f9edc15f19aacd71863137168bb86b06f099913e8b861f5d55c9ca3360ce3ab7",
-                "sha256_in_prefix": "f9edc15f19aacd71863137168bb86b06f099913e8b861f5d55c9ca3360ce3ab7",
-                "size_in_bytes": 3135
+                "sha256": "309b28c39fca3ca5b425f9490040e007bd5cda60963f654ced4d89fbb2d160f9",
+                "sha256_in_prefix": "309b28c39fca3ca5b425f9490040e007bd5cda60963f654ced4d89fbb2d160f9",
+                "size_in_bytes": 3123
             },
             {
-                "_path": "lib/python3.12/site-packages/setuptools-70.1.0-py3.12.egg-info/PKG-INFO",
+                "_path": "lib/python3.12/site-packages/setuptools-70.2.0-py3.12.egg-info/PKG-INFO",
                 "path_type": "hardlink",
-                "sha256": "04ea53797f5dc4b41a9614aa0f22f1a47d427a96fb0e629f12984541a316d227",
-                "sha256_in_prefix": "04ea53797f5dc4b41a9614aa0f22f1a47d427a96fb0e629f12984541a316d227",
-                "size_in_bytes": 5893
+                "sha256": "55811a123d524d1f0baae4ec3d2e4a306fecd23eaa7f0c0a5ff0159ee8de90ee",
+                "sha256_in_prefix": "55811a123d524d1f0baae4ec3d2e4a306fecd23eaa7f0c0a5ff0159ee8de90ee",
+                "size_in_bytes": 5748
             },
             {
-                "_path": "lib/python3.12/site-packages/setuptools-70.1.0-py3.12.egg-info/SOURCES.txt",
+                "_path": "lib/python3.12/site-packages/setuptools-70.2.0-py3.12.egg-info/SOURCES.txt",
                 "path_type": "hardlink",
-                "sha256": "58c4a4c03333a093cea20f46ceeb9698070b67dc6384d36f372d2f6659bcdb94",
-                "sha256_in_prefix": "58c4a4c03333a093cea20f46ceeb9698070b67dc6384d36f372d2f6659bcdb94",
-                "size_in_bytes": 23427
+                "sha256": "9ee7c131321c1b909d83e4716b708bed1a1a28ab302ced994f45550d3e2136d8",
+                "sha256_in_prefix": "9ee7c131321c1b909d83e4716b708bed1a1a28ab302ced994f45550d3e2136d8",
+                "size_in_bytes": 23237
             },
             {
-                "_path": "lib/python3.12/site-packages/setuptools-70.1.0-py3.12.egg-info/dependency_links.txt",
+                "_path": "lib/python3.12/site-packages/setuptools-70.2.0-py3.12.egg-info/dependency_links.txt",
                 "path_type": "hardlink",
                 "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
                 "sha256_in_prefix": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
                 "size_in_bytes": 1
             },
             {
-                "_path": "lib/python3.12/site-packages/setuptools-70.1.0-py3.12.egg-info/entry_points.txt",
+                "_path": "lib/python3.12/site-packages/setuptools-70.2.0-py3.12.egg-info/entry_points.txt",
                 "path_type": "hardlink",
                 "sha256": "f2abb978e7b9c21cc196aa90f451b04afe60b8da26f949429fcf53f5733d5dcb",
                 "sha256_in_prefix": "f2abb978e7b9c21cc196aa90f451b04afe60b8da26f949429fcf53f5733d5dcb",
                 "size_in_bytes": 2733
             },
             {
-                "_path": "lib/python3.12/site-packages/setuptools-70.1.0-py3.12.egg-info/requires.txt",
+                "_path": "lib/python3.12/site-packages/setuptools-70.2.0-py3.12.egg-info/requires.txt",
                 "path_type": "hardlink",
-                "sha256": "4901c44f181b31a280871766852864c01327479d42a4b74008d0e289db395c7b",
-                "sha256_in_prefix": "4901c44f181b31a280871766852864c01327479d42a4b74008d0e289db395c7b",
-                "size_in_bytes": 866
+                "sha256": "267cc2802454062b74dea23e043189262be932c48690f8960c0b74a2762c9594",
+                "sha256_in_prefix": "267cc2802454062b74dea23e043189262be932c48690f8960c0b74a2762c9594",
+                "size_in_bytes": 804
             },
             {
-                "_path": "lib/python3.12/site-packages/setuptools-70.1.0-py3.12.egg-info/top_level.txt",
+                "_path": "lib/python3.12/site-packages/setuptools-70.2.0-py3.12.egg-info/top_level.txt",
                 "path_type": "hardlink",
                 "sha256": "77dc8bdfdbff5bbaa62830d21fab13e1b1348ff2ecd4cdcfd7ad4e1a076c9b88",
                 "sha256_in_prefix": "77dc8bdfdbff5bbaa62830d21fab13e1b1348ff2ecd4cdcfd7ad4e1a076c9b88",
@@ -958,16 +987,16 @@
             {
                 "_path": "lib/python3.12/site-packages/setuptools/__init__.py",
                 "path_type": "hardlink",
-                "sha256": "fe76f4bc076c5829346013de28f03627baf8f1dd30c405e3c199d4dd1c9d321a",
-                "sha256_in_prefix": "fe76f4bc076c5829346013de28f03627baf8f1dd30c405e3c199d4dd1c9d321a",
-                "size_in_bytes": 8954
+                "sha256": "8fa66332d5f88038060a83c1f7a5a1ce35546eb5ce7288ba25746a55216c4945",
+                "sha256_in_prefix": "8fa66332d5f88038060a83c1f7a5a1ce35546eb5ce7288ba25746a55216c4945",
+                "size_in_bytes": 8950
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_core_metadata.py",
                 "path_type": "hardlink",
-                "sha256": "9688a79e948db9b9052e1468273c62899fa6c8c20637b8f375152de88f4296b4",
-                "sha256_in_prefix": "9688a79e948db9b9052e1468273c62899fa6c8c20637b8f375152de88f4296b4",
-                "size_in_bytes": 9196
+                "sha256": "70c5cbfca63289464f98a52411cc62a91b386c008956520da579d9c13f8bbe39",
+                "sha256_in_prefix": "70c5cbfca63289464f98a52411cc62a91b386c008956520da579d9c13f8bbe39",
+                "size_in_bytes": 9826
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/__init__.py",
@@ -1014,51 +1043,161 @@
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/_modified.py",
                 "path_type": "hardlink",
-                "sha256": "8da10681c63b6e4aa4de8940e5c0c8f4ed7abac040cfcd1d6a3379a14764700a",
-                "sha256_in_prefix": "8da10681c63b6e4aa4de8940e5c0c8f4ed7abac040cfcd1d6a3379a14764700a",
-                "size_in_bytes": 2411
+                "sha256": "208abf11f2a6e502ad38858b4f79a6fec48f1994e4a85859b9c7a9a45b9d1e63",
+                "sha256_in_prefix": "208abf11f2a6e502ad38858b4f79a6fec48f1994e4a85859b9c7a9a45b9d1e63",
+                "size_in_bytes": 2410
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/_msvccompiler.py",
                 "path_type": "hardlink",
-                "sha256": "d1624151e80c9ac8c489b00419678c23a64ca43772b4515c991390dd878d18f6",
-                "sha256_in_prefix": "d1624151e80c9ac8c489b00419678c23a64ca43772b4515c991390dd878d18f6",
-                "size_in_bytes": 20010
+                "sha256": "5b21e97599a984f379f2d520eaf3a79c762acc1103e18e804375532cc0191efc",
+                "sha256_in_prefix": "5b21e97599a984f379f2d520eaf3a79c762acc1103e18e804375532cc0191efc",
+                "size_in_bytes": 20038
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/__init__.py",
+                "path_type": "hardlink",
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__init__.py",
+                "path_type": "hardlink",
+                "sha256": "533a2d715d3ba7cbdc27377cd12f96d2cae1818f0d3150ff5ef25c67b24dfad0",
+                "sha256_in_prefix": "533a2d715d3ba7cbdc27377cd12f96d2cae1818f0d3150ff5ef25c67b24dfad0",
+                "size_in_bytes": 496
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/_elffile.py",
+                "path_type": "hardlink",
+                "sha256": "85b98af0e0fa67b7d8ea1c229c7114703d5bcbb73390688d62eed28671449369",
+                "sha256_in_prefix": "85b98af0e0fa67b7d8ea1c229c7114703d5bcbb73390688d62eed28671449369",
+                "size_in_bytes": 3266
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/_manylinux.py",
+                "path_type": "hardlink",
+                "sha256": "d6783f4eac87e3d858eacdd6ff3547ca82486a881b26a6c81758c9d1f01e85ce",
+                "sha256_in_prefix": "d6783f4eac87e3d858eacdd6ff3547ca82486a881b26a6c81758c9d1f01e85ce",
+                "size_in_bytes": 9590
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/_musllinux.py",
+                "path_type": "hardlink",
+                "sha256": "92098118b1726e9cbceb4f7e293bf39addb30a108f598be1a790563f8257edd1",
+                "sha256_in_prefix": "92098118b1726e9cbceb4f7e293bf39addb30a108f598be1a790563f8257edd1",
+                "size_in_bytes": 2676
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/_parser.py",
+                "path_type": "hardlink",
+                "sha256": "ce5b050751693118e451d41be962eaef138de76aee41a77116962c0d75a12dbe",
+                "sha256_in_prefix": "ce5b050751693118e451d41be962eaef138de76aee41a77116962c0d75a12dbe",
+                "size_in_bytes": 10347
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/_structures.py",
+                "path_type": "hardlink",
+                "sha256": "ab77953666d62461bf4b40e2b7f4b7028f2a42acffe4f6135c500a0597b9cabe",
+                "sha256_in_prefix": "ab77953666d62461bf4b40e2b7f4b7028f2a42acffe4f6135c500a0597b9cabe",
+                "size_in_bytes": 1431
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/_tokenizer.py",
+                "path_type": "hardlink",
+                "sha256": "6a50ad6f05e138502614667a050fb0093485a11009db3fb2b087fbfff31327f9",
+                "sha256_in_prefix": "6a50ad6f05e138502614667a050fb0093485a11009db3fb2b087fbfff31327f9",
+                "size_in_bytes": 5292
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/markers.py",
+                "path_type": "hardlink",
+                "sha256": "787fadc52db3ab51dd3694ddf4b71951c548c1ec0088d53482b9aae708ca9ce9",
+                "sha256_in_prefix": "787fadc52db3ab51dd3694ddf4b71951c548c1ec0088d53482b9aae708ca9ce9",
+                "size_in_bytes": 8208
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/metadata.py",
+                "path_type": "hardlink",
+                "sha256": "c3b8cf120ea60dfd454d9327efd685c45ba4e122adca7509b71af62274f1955e",
+                "sha256_in_prefix": "c3b8cf120ea60dfd454d9327efd685c45ba4e122adca7509b71af62274f1955e",
+                "size_in_bytes": 33036
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/py.typed",
+                "path_type": "hardlink",
+                "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "sha256_in_prefix": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/requirements.py",
+                "path_type": "hardlink",
+                "sha256": "760a01795a6b3eed9813a43c9c67f038f4e30131db45afd918bc978451259fa4",
+                "sha256_in_prefix": "760a01795a6b3eed9813a43c9c67f038f4e30131db45afd918bc978451259fa4",
+                "size_in_bytes": 2933
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/specifiers.py",
+                "path_type": "hardlink",
+                "sha256": "741d83c1b9af49b12e562944ca2210dfcd987d6e497f0cd74df4513d5b5a10d6",
+                "sha256_in_prefix": "741d83c1b9af49b12e562944ca2210dfcd987d6e497f0cd74df4513d5b5a10d6",
+                "size_in_bytes": 39784
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/tags.py",
+                "path_type": "hardlink",
+                "sha256": "7de7475e2387901c4d6535e8b57bfcb973e630553d69ef93281ba38181e281c0",
+                "sha256_in_prefix": "7de7475e2387901c4d6535e8b57bfcb973e630553d69ef93281ba38181e281c0",
+                "size_in_bytes": 18950
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/utils.py",
+                "path_type": "hardlink",
+                "sha256": "5e07663f7cb1f7ec101058ceecebcc8fd46311fe49951e4714547af6fed243d1",
+                "sha256_in_prefix": "5e07663f7cb1f7ec101058ceecebcc8fd46311fe49951e4714547af6fed243d1",
+                "size_in_bytes": 5268
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/version.py",
+                "path_type": "hardlink",
+                "sha256": "5e34412cd2b5ed430380b78ff141e7ab0898dd37528b4df1150511b5e736d750",
+                "sha256_in_prefix": "5e34412cd2b5ed430380b78ff141e7ab0898dd37528b4df1150511b5e736d750",
+                "size_in_bytes": 16236
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/archive_util.py",
                 "path_type": "hardlink",
-                "sha256": "84dc1e117d32470481bcaa3527228e7ea3f2404368ea8f7c847f7d8de5c66cac",
-                "sha256_in_prefix": "84dc1e117d32470481bcaa3527228e7ea3f2404368ea8f7c847f7d8de5c66cac",
-                "size_in_bytes": 8572
+                "sha256": "2a910502808952faf6b96b41dd06d65d7b750881fa094d1af0954e3462df73a5",
+                "sha256_in_prefix": "2a910502808952faf6b96b41dd06d65d7b750881fa094d1af0954e3462df73a5",
+                "size_in_bytes": 8551
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/bcppcompiler.py",
                 "path_type": "hardlink",
-                "sha256": "72230d1546ef72894553b0f9782d45847819e06e3ef5b859677a03e9b84066ae",
-                "sha256_in_prefix": "72230d1546ef72894553b0f9782d45847819e06e3ef5b859677a03e9b84066ae",
-                "size_in_bytes": 14662
+                "sha256": "52712802f9aaa538ef82368e419d8c28cac0128e50c886552fae3882a7f4e65c",
+                "sha256_in_prefix": "52712802f9aaa538ef82368e419d8c28cac0128e50c886552fae3882a7f4e65c",
+                "size_in_bytes": 14674
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/ccompiler.py",
                 "path_type": "hardlink",
-                "sha256": "9186fcc3d663a93a60b174047e8442f6d599161f03d18c244281921d89146e8e",
-                "sha256_in_prefix": "9186fcc3d663a93a60b174047e8442f6d599161f03d18c244281921d89146e8e",
-                "size_in_bytes": 48645
+                "sha256": "5edaa1428c486ad3277388c1523e55d1e3fdbb46dce736de0d1b64af4523dc4e",
+                "sha256_in_prefix": "5edaa1428c486ad3277388c1523e55d1e3fdbb46dce736de0d1b64af4523dc4e",
+                "size_in_bytes": 48935
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/cmd.py",
                 "path_type": "hardlink",
-                "sha256": "e33faad4207151e137712b1d4f4aaf222aa645bc8ad950dabd68a8f7a9fc5b78",
-                "sha256_in_prefix": "e33faad4207151e137712b1d4f4aaf222aa645bc8ad950dabd68a8f7a9fc5b78",
-                "size_in_bytes": 17801
+                "sha256": "b197839d81ee66aca434c3a55f8bacb25c49e23c0f8c05ca26f5d8bb9a3bb67b",
+                "sha256_in_prefix": "b197839d81ee66aca434c3a55f8bacb25c49e23c0f8c05ca26f5d8bb9a3bb67b",
+                "size_in_bytes": 17877
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/command/__init__.py",
                 "path_type": "hardlink",
-                "sha256": "7d5529b380c986f4a1300a1dd32ef1974da6e3a6ddeebdf58ab1213687cfaebb",
-                "sha256_in_prefix": "7d5529b380c986f4a1300a1dd32ef1974da6e3a6ddeebdf58ab1213687cfaebb",
-                "size_in_bytes": 430
+                "sha256": "09e157c438251a8109b3639a3ee386571fde59bff220eb9ade79017f38ddc105",
+                "sha256_in_prefix": "09e157c438251a8109b3639a3ee386571fde59bff220eb9ade79017f38ddc105",
+                "size_in_bytes": 416
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/command/_framework_compat.py",
@@ -1070,93 +1209,93 @@
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/command/bdist.py",
                 "path_type": "hardlink",
-                "sha256": "d5127472bcc6eab7f34feae1504e8011147fdb1e6e9210ab510269c1a941280e",
-                "sha256_in_prefix": "d5127472bcc6eab7f34feae1504e8011147fdb1e6e9210ab510269c1a941280e",
-                "size_in_bytes": 5353
+                "sha256": "7b94bb806c2bd2c4e9508cdd4693ee8521b382a804491f76f5e4ca9caff79e64",
+                "sha256_in_prefix": "7b94bb806c2bd2c4e9508cdd4693ee8521b382a804491f76f5e4ca9caff79e64",
+                "size_in_bytes": 5354
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/command/bdist_dumb.py",
                 "path_type": "hardlink",
-                "sha256": "0941ea4885e64498c6adff98707b4621a9fbcaa9a3a036a4166c30ef82f5bd8c",
-                "sha256_in_prefix": "0941ea4885e64498c6adff98707b4621a9fbcaa9a3a036a4166c30ef82f5bd8c",
-                "size_in_bytes": 4596
+                "sha256": "1a2fddd4dcf897a1b3ff15382d17d1551281ae2db65a834f33bb98c97da4b1d9",
+                "sha256_in_prefix": "1a2fddd4dcf897a1b3ff15382d17d1551281ae2db65a834f33bb98c97da4b1d9",
+                "size_in_bytes": 4582
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/command/bdist_rpm.py",
                 "path_type": "hardlink",
-                "sha256": "5736605a4a52cfd226bb879e42fbd95a0b0b4abafc87b6ab463c9911980ee80c",
-                "sha256_in_prefix": "5736605a4a52cfd226bb879e42fbd95a0b0b4abafc87b6ab463c9911980ee80c",
-                "size_in_bytes": 21717
+                "sha256": "0df660bcf9a6dcf4c0777f58ccb790f1f99bc9119a5e8fa79a7533604b5c720d",
+                "sha256_in_prefix": "0df660bcf9a6dcf4c0777f58ccb790f1f99bc9119a5e8fa79a7533604b5c720d",
+                "size_in_bytes": 21686
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/command/build.py",
                 "path_type": "hardlink",
-                "sha256": "7ad5cc9c1071d6e813de49c02d74f7c47d641efc44f83926a76a248f19d6a6e1",
-                "sha256_in_prefix": "7ad5cc9c1071d6e813de49c02d74f7c47d641efc44f83926a76a248f19d6a6e1",
-                "size_in_bytes": 5575
+                "sha256": "fe352a1b719628875d39e31592d3d4b55bf4e61481b7eff4ccbad3072bb7fea0",
+                "sha256_in_prefix": "fe352a1b719628875d39e31592d3d4b55bf4e61481b7eff4ccbad3072bb7fea0",
+                "size_in_bytes": 5729
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/command/build_clib.py",
                 "path_type": "hardlink",
-                "sha256": "298f780afe9da56c8e8d72ead70888a621a090cfc96a36d09659bfbe82f484db",
-                "sha256_in_prefix": "298f780afe9da56c8e8d72ead70888a621a090cfc96a36d09659bfbe82f484db",
-                "size_in_bytes": 7686
+                "sha256": "a93a6fcfe0dbdb01232a45ff90fc184331540a83f91d9adc6cbbb81c6293274a",
+                "sha256_in_prefix": "a93a6fcfe0dbdb01232a45ff90fc184331540a83f91d9adc6cbbb81c6293274a",
+                "size_in_bytes": 7684
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/command/build_ext.py",
                 "path_type": "hardlink",
-                "sha256": "39b376f70ecb09cf54a71266c058fa540660618362b7906cbd5b37a91a4443e3",
-                "sha256_in_prefix": "39b376f70ecb09cf54a71266c058fa540660618362b7906cbd5b37a91a4443e3",
-                "size_in_bytes": 31793
+                "sha256": "3b5690b728506e0d7d752aca06bef25a36ceabfd0f1113b2ee8c3a91e631fd5d",
+                "sha256_in_prefix": "3b5690b728506e0d7d752aca06bef25a36ceabfd0f1113b2ee8c3a91e631fd5d",
+                "size_in_bytes": 31850
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/command/build_py.py",
                 "path_type": "hardlink",
-                "sha256": "7c8d9f4853658504a2d2730a89308961617a5442b1f1a4ef88fdefcf38a90c99",
-                "sha256_in_prefix": "7c8d9f4853658504a2d2730a89308961617a5442b1f1a4ef88fdefcf38a90c99",
-                "size_in_bytes": 16539
+                "sha256": "70d7bcbf0321c8f27680dea3a2df5c398e4eb943d4bd3ea3f5f205702f857229",
+                "sha256_in_prefix": "70d7bcbf0321c8f27680dea3a2df5c398e4eb943d4bd3ea3f5f205702f857229",
+                "size_in_bytes": 16552
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/command/build_scripts.py",
                 "path_type": "hardlink",
-                "sha256": "098bc7df49cf62cd21154201b125e2e33b16e59699c5955a5a8749763cd6243a",
-                "sha256_in_prefix": "098bc7df49cf62cd21154201b125e2e33b16e59699c5955a5a8749763cd6243a",
-                "size_in_bytes": 5536
+                "sha256": "107095c8288ff403c4f57ef84a43968f801d4b98810ae7bb3eaa4b40ff3a7b56",
+                "sha256_in_prefix": "107095c8288ff403c4f57ef84a43968f801d4b98810ae7bb3eaa4b40ff3a7b56",
+                "size_in_bytes": 5534
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/command/check.py",
                 "path_type": "hardlink",
-                "sha256": "79ea2aeb45e139f97b1fc7f2d1aab41fa4c2c99bcbf898675ed5c09ec6124204",
-                "sha256_in_prefix": "79ea2aeb45e139f97b1fc7f2d1aab41fa4c2c99bcbf898675ed5c09ec6124204",
-                "size_in_bytes": 4912
+                "sha256": "42a3d8afba6c14a43e43098ee2ed110a587743d22b23fd7a6546167303751316",
+                "sha256_in_prefix": "42a3d8afba6c14a43e43098ee2ed110a587743d22b23fd7a6546167303751316",
+                "size_in_bytes": 4928
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/command/clean.py",
                 "path_type": "hardlink",
-                "sha256": "44575f130365259f92c3f50f3d8adcc6a6b45885fd347404f29bde4b805c4bc0",
-                "sha256_in_prefix": "44575f130365259f92c3f50f3d8adcc6a6b45885fd347404f29bde4b805c4bc0",
+                "sha256": "aa52ad87be2358b66329ada7c4e6b2ff616e6ba315353ae80296903af6b67707",
+                "sha256_in_prefix": "aa52ad87be2358b66329ada7c4e6b2ff616e6ba315353ae80296903af6b67707",
                 "size_in_bytes": 2595
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/command/config.py",
                 "path_type": "hardlink",
-                "sha256": "061924e0a803f791d5eef88b0cf42a245ea460215b3257bedaa6414d35a53ead",
-                "sha256_in_prefix": "061924e0a803f791d5eef88b0cf42a245ea460215b3257bedaa6414d35a53ead",
-                "size_in_bytes": 13007
+                "sha256": "14a776bd44953a9d2ba5551eaf86e3e83f78f9fcb1c85f072718ad46564573d7",
+                "sha256_in_prefix": "14a776bd44953a9d2ba5551eaf86e3e83f78f9fcb1c85f072718ad46564573d7",
+                "size_in_bytes": 13008
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/command/install.py",
                 "path_type": "hardlink",
-                "sha256": "15443364bffd763f06bae8c0e25df88d98901e77b0fa9ec1b5f7ba15373a3a13",
-                "sha256_in_prefix": "15443364bffd763f06bae8c0e25df88d98901e77b0fa9ec1b5f7ba15373a3a13",
-                "size_in_bytes": 30128
+                "sha256": "bd35a809da55d297c72479a6cd9c54563e74d398a60fa72935d8ba5e05b0c68b",
+                "sha256_in_prefix": "bd35a809da55d297c72479a6cd9c54563e74d398a60fa72935d8ba5e05b0c68b",
+                "size_in_bytes": 30079
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/command/install_data.py",
                 "path_type": "hardlink",
-                "sha256": "825da1ddc3f0378877f3c04a0dacd3b4db7427c28ff525db6e007730d54b2d78",
-                "sha256_in_prefix": "825da1ddc3f0378877f3c04a0dacd3b4db7427c28ff525db6e007730d54b2d78",
-                "size_in_bytes": 2757
+                "sha256": "69c0b49f23814a9fdaef40a741c2d8f62385ce0b528c6b216abe35fc247299c0",
+                "sha256_in_prefix": "69c0b49f23814a9fdaef40a741c2d8f62385ce0b528c6b216abe35fc247299c0",
+                "size_in_bytes": 2764
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/command/install_egg_info.py",
@@ -1168,79 +1307,86 @@
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/command/install_headers.py",
                 "path_type": "hardlink",
-                "sha256": "bfe41c5648da597e727f4c5aba9f7f2b249a9d596677a2e1bb31211a99938935",
-                "sha256_in_prefix": "bfe41c5648da597e727f4c5aba9f7f2b249a9d596677a2e1bb31211a99938935",
-                "size_in_bytes": 1180
+                "sha256": "5a6a70da7a513541983d1d4101b46945a15b0c515ff8a282115cd41b212ecaf6",
+                "sha256_in_prefix": "5a6a70da7a513541983d1d4101b46945a15b0c515ff8a282115cd41b212ecaf6",
+                "size_in_bytes": 1184
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/command/install_lib.py",
                 "path_type": "hardlink",
-                "sha256": "c7fe942f37294d85cd10caca7b6e61ef8b4a96c68c7bb7b1bb65021cbe6d9689",
-                "sha256_in_prefix": "c7fe942f37294d85cd10caca7b6e61ef8b4a96c68c7bb7b1bb65021cbe6d9689",
-                "size_in_bytes": 8408
+                "sha256": "174938104912dbd0667cc5b086b118c127cb358282bff71936fafc875f24a456",
+                "sha256_in_prefix": "174938104912dbd0667cc5b086b118c127cb358282bff71936fafc875f24a456",
+                "size_in_bytes": 8410
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/command/install_scripts.py",
                 "path_type": "hardlink",
-                "sha256": "84260a2761b37ee64aed1812343715239ddcd68e14eeb1c314307de8def56741",
-                "sha256_in_prefix": "84260a2761b37ee64aed1812343715239ddcd68e14eeb1c314307de8def56741",
-                "size_in_bytes": 1933
+                "sha256": "430f0aac2db899c21e244bdc04d28848ca62ef99e94a6ea3cd6e813b303d1bb8",
+                "sha256_in_prefix": "430f0aac2db899c21e244bdc04d28848ca62ef99e94a6ea3cd6e813b303d1bb8",
+                "size_in_bytes": 1937
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/command/register.py",
                 "path_type": "hardlink",
-                "sha256": "1886de75a3c4b9525ab1a27a2cede2f4f275b648d00162859f6d28f49ce76b34",
-                "sha256_in_prefix": "1886de75a3c4b9525ab1a27a2cede2f4f275b648d00162859f6d28f49ce76b34",
-                "size_in_bytes": 11805
+                "sha256": "a106494a018469d8fe86efb2352fc05b15110f1e309833d27078776f1a827682",
+                "sha256_in_prefix": "a106494a018469d8fe86efb2352fc05b15110f1e309833d27078776f1a827682",
+                "size_in_bytes": 11793
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/command/sdist.py",
                 "path_type": "hardlink",
-                "sha256": "bc3c16e70f5ebf8ce72b46b238a606cac4b31d62e12f3ebf8da54a59dcc71847",
-                "sha256_in_prefix": "bc3c16e70f5ebf8ce72b46b238a606cac4b31d62e12f3ebf8da54a59dcc71847",
-                "size_in_bytes": 19188
+                "sha256": "90f3ef4bad36933142617494a28dc9922f7881104747ca544025eb87b91def90",
+                "sha256_in_prefix": "90f3ef4bad36933142617494a28dc9922f7881104747ca544025eb87b91def90",
+                "size_in_bytes": 19196
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/command/upload.py",
                 "path_type": "hardlink",
-                "sha256": "eb9ce1bc7eb61bb43731d3b9217b4c5ad14d2cd49855e9e0921fcb3431a20678",
-                "sha256_in_prefix": "eb9ce1bc7eb61bb43731d3b9217b4c5ad14d2cd49855e9e0921fcb3431a20678",
-                "size_in_bytes": 7497
+                "sha256": "fee3ab041cfa0b93fa69bca886252612b49ecfeab1b823af93e029a77bbbc262",
+                "sha256_in_prefix": "fee3ab041cfa0b93fa69bca886252612b49ecfeab1b823af93e029a77bbbc262",
+                "size_in_bytes": 7493
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/compat/__init__.py",
                 "path_type": "hardlink",
-                "sha256": "7dd2f38cefc291fcc11703895fd5c87d76c191e60accc8950017794f874b64e5",
-                "sha256_in_prefix": "7dd2f38cefc291fcc11703895fd5c87d76c191e60accc8950017794f874b64e5",
-                "size_in_bytes": 417
+                "sha256": "02131d8b70335fad8a62735d382704b8d5cbb813b186f392407b5d8e2e20f33f",
+                "sha256_in_prefix": "02131d8b70335fad8a62735d382704b8d5cbb813b186f392407b5d8e2e20f33f",
+                "size_in_bytes": 429
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/compat/py38.py",
                 "path_type": "hardlink",
-                "sha256": "da181ef7f1772e2bd6e11e29b45aac1b9b1be96aec41cf55df4970316bfcea18",
-                "sha256_in_prefix": "da181ef7f1772e2bd6e11e29b45aac1b9b1be96aec41cf55df4970316bfcea18",
-                "size_in_bytes": 567
+                "sha256": "30e44195423db57fe5d2600cfe9e82a8bbd8d7f01f20a7c8bee71ffa10b95748",
+                "sha256_in_prefix": "30e44195423db57fe5d2600cfe9e82a8bbd8d7f01f20a7c8bee71ffa10b95748",
+                "size_in_bytes": 790
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/compat/py39.py",
+                "path_type": "hardlink",
+                "sha256": "84eb03ea5c192ea66832769c349dcfea7500f8b250844a55b584f3547d28f7a3",
+                "sha256_in_prefix": "84eb03ea5c192ea66832769c349dcfea7500f8b250844a55b584f3547d28f7a3",
+                "size_in_bytes": 1964
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/config.py",
                 "path_type": "hardlink",
-                "sha256": "70274bec101abdd87fdad0d6d04669d6ba35bd37968456732d73753fa1c097a5",
-                "sha256_in_prefix": "70274bec101abdd87fdad0d6d04669d6ba35bd37968456732d73753fa1c097a5",
+                "sha256": "e4c4569a5967beccc8be5e0e5e7ce64dd3a1307419f74722fa7ed30e9f369c97",
+                "sha256_in_prefix": "e4c4569a5967beccc8be5e0e5e7ce64dd3a1307419f74722fa7ed30e9f369c97",
                 "size_in_bytes": 5226
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/core.py",
                 "path_type": "hardlink",
-                "sha256": "58f66badfda66ccf553e0e28fe38c044f5602f340d61dfdab4c4df36bd8fd6f2",
-                "sha256_in_prefix": "58f66badfda66ccf553e0e28fe38c044f5602f340d61dfdab4c4df36bd8fd6f2",
-                "size_in_bytes": 9372
+                "sha256": "d07f443abd5d6a22c24e18c440bc43d68891028d489467498240bb19d3b4a79c",
+                "sha256_in_prefix": "d07f443abd5d6a22c24e18c440bc43d68891028d489467498240bb19d3b4a79c",
+                "size_in_bytes": 9318
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/cygwinccompiler.py",
                 "path_type": "hardlink",
-                "sha256": "4813feddc00c5e99604e862675e621eab88adc9320ad93cd6bd76a3aa282899d",
-                "sha256_in_prefix": "4813feddc00c5e99604e862675e621eab88adc9320ad93cd6bd76a3aa282899d",
-                "size_in_bytes": 11945
+                "sha256": "1237c9d5f76c203fa69d9c26a27aad96f7a4d599382d99ac8b6f0d094e120647",
+                "sha256_in_prefix": "1237c9d5f76c203fa69d9c26a27aad96f7a4d599382d99ac8b6f0d094e120647",
+                "size_in_bytes": 11954
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/debug.py",
@@ -1259,16 +1405,16 @@
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/dir_util.py",
                 "path_type": "hardlink",
-                "sha256": "68ef7930b0eadbf070ecf221781f887a8605db173dc9fa3e08c9498363a5c106",
-                "sha256_in_prefix": "68ef7930b0eadbf070ecf221781f887a8605db173dc9fa3e08c9498363a5c106",
-                "size_in_bytes": 7965
+                "sha256": "0f60798b0af1c2384fa69e9c99cd206e34ee433ec20a24982458bdbcae64f367",
+                "sha256_in_prefix": "0f60798b0af1c2384fa69e9c99cd206e34ee433ec20a24982458bdbcae64f367",
+                "size_in_bytes": 8007
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/dist.py",
                 "path_type": "hardlink",
-                "sha256": "44649f18c283ac82c6c2eca50dbc7b30bafe736f7c233c8224acf03b6cb5b4f6",
-                "sha256_in_prefix": "44649f18c283ac82c6c2eca50dbc7b30bafe736f7c233c8224acf03b6cb5b4f6",
-                "size_in_bytes": 50116
+                "sha256": "e622a4286b068e6c5bd07266f9435fa69fb4a49907587825d30953b35f8d8d8e",
+                "sha256_in_prefix": "e622a4286b068e6c5bd07266f9435fa69fb4a49907587825d30953b35f8d8d8e",
+                "size_in_bytes": 50977
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/errors.py",
@@ -1280,30 +1426,30 @@
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/extension.py",
                 "path_type": "hardlink",
-                "sha256": "ab083508d2603761aaedb1457d0cf62696fc2df2fe11cd854e58bc439aa1683e",
-                "sha256_in_prefix": "ab083508d2603761aaedb1457d0cf62696fc2df2fe11cd854e58bc439aa1683e",
-                "size_in_bytes": 10197
+                "sha256": "8bb1648e56ec893e8c078f6ea53701aa63f7b7f58bfb8b237a51f7b167d5eace",
+                "sha256_in_prefix": "8bb1648e56ec893e8c078f6ea53701aa63f7b7f58bfb8b237a51f7b167d5eace",
+                "size_in_bytes": 10206
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/fancy_getopt.py",
                 "path_type": "hardlink",
-                "sha256": "571c071edc898bc429f19c0ab89873c52917f71c2a0aaa80c6ae1df156e40166",
-                "sha256_in_prefix": "571c071edc898bc429f19c0ab89873c52917f71c2a0aaa80c6ae1df156e40166",
-                "size_in_bytes": 17831
+                "sha256": "15f04a8dfcc05cec20d70248543048a1381a96cf7e5cba50762f986d94bcd89c",
+                "sha256_in_prefix": "15f04a8dfcc05cec20d70248543048a1381a96cf7e5cba50762f986d94bcd89c",
+                "size_in_bytes": 17822
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/file_util.py",
                 "path_type": "hardlink",
-                "sha256": "dc0ffd832901047167d107fc13390961aa98ce641bf3e92a947421b1a9000af9",
-                "sha256_in_prefix": "dc0ffd832901047167d107fc13390961aa98ce641bf3e92a947421b1a9000af9",
-                "size_in_bytes": 7926
+                "sha256": "1c0d7ace53be1533d7a28e1ea3cc7392fe7b20e71e947a4002bf1ea27089b155",
+                "sha256_in_prefix": "1c0d7ace53be1533d7a28e1ea3cc7392fe7b20e71e947a4002bf1ea27089b155",
+                "size_in_bytes": 7944
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/filelist.py",
                 "path_type": "hardlink",
-                "sha256": "f0443c6d5f71dd7016f1d6ba088c8c1f9feaa3615fd052451f256988f60558c3",
-                "sha256_in_prefix": "f0443c6d5f71dd7016f1d6ba088c8c1f9feaa3615fd052451f256988f60558c3",
-                "size_in_bytes": 13635
+                "sha256": "3e37957e9bef8d8d34b0ec287dde1defd1148e623f73bb9d78f08be9111b6333",
+                "sha256_in_prefix": "3e37957e9bef8d8d34b0ec287dde1defd1148e623f73bb9d78f08be9111b6333",
+                "size_in_bytes": 13654
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/log.py",
@@ -1315,86 +1461,72 @@
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/msvc9compiler.py",
                 "path_type": "hardlink",
-                "sha256": "f985ea4abdbe393ca09ba49c1e6291ac8fe02d995464a128587b2e70d06d78bd",
-                "sha256_in_prefix": "f985ea4abdbe393ca09ba49c1e6291ac8fe02d995464a128587b2e70d06d78bd",
-                "size_in_bytes": 30108
+                "sha256": "b01092459dee85f5290510e2ec21f48fba39c6d109fd7ad73179139447a30de5",
+                "sha256_in_prefix": "b01092459dee85f5290510e2ec21f48fba39c6d109fd7ad73179139447a30de5",
+                "size_in_bytes": 30129
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/msvccompiler.py",
                 "path_type": "hardlink",
-                "sha256": "2b84a7236e3c86fdfb970f10ba3b472ad1176d3756749c10e48cdaac2416f179",
-                "sha256_in_prefix": "2b84a7236e3c86fdfb970f10ba3b472ad1176d3756749c10e48cdaac2416f179",
-                "size_in_bytes": 23443
-            },
-            {
-                "_path": "lib/python3.12/site-packages/setuptools/_distutils/py38compat.py",
-                "path_type": "hardlink",
-                "sha256": "8a9d2a768146dfed5d2794ac2e049a669c9c3a3a60e58fe89fb6edb0f0d2f24c",
-                "sha256_in_prefix": "8a9d2a768146dfed5d2794ac2e049a669c9c3a3a60e58fe89fb6edb0f0d2f24c",
-                "size_in_bytes": 205
-            },
-            {
-                "_path": "lib/python3.12/site-packages/setuptools/_distutils/py39compat.py",
-                "path_type": "hardlink",
-                "sha256": "84eb03ea5c192ea66832769c349dcfea7500f8b250844a55b584f3547d28f7a3",
-                "sha256_in_prefix": "84eb03ea5c192ea66832769c349dcfea7500f8b250844a55b584f3547d28f7a3",
-                "size_in_bytes": 1964
+                "sha256": "bb3eec02264a37ff339883770dbd5aafe8207f86a1c19067cfbde84ef25620fd",
+                "sha256_in_prefix": "bb3eec02264a37ff339883770dbd5aafe8207f86a1c19067cfbde84ef25620fd",
+                "size_in_bytes": 23451
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/spawn.py",
                 "path_type": "hardlink",
-                "sha256": "f4b5306c9b1973056b331efcca764878e15f7864d5e35f9b7fd1a0b0482e474e",
-                "sha256_in_prefix": "f4b5306c9b1973056b331efcca764878e15f7864d5e35f9b7fd1a0b0482e474e",
-                "size_in_bytes": 3431
+                "sha256": "5bca284f3487e82e2bb5c19645b20b46de8ab211fe7c3bc402fefbe342f5d816",
+                "sha256_in_prefix": "5bca284f3487e82e2bb5c19645b20b46de8ab211fe7c3bc402fefbe342f5d816",
+                "size_in_bytes": 3626
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/sysconfig.py",
                 "path_type": "hardlink",
-                "sha256": "b03acf4c597e4335659de580e126807ff01e4c8644fa9cad5a7c467d11ea0483",
-                "sha256_in_prefix": "b03acf4c597e4335659de580e126807ff01e4c8644fa9cad5a7c467d11ea0483",
-                "size_in_bytes": 18485
+                "sha256": "4ef513b8f0b9a7e240942ce7b5031c0fae5869631a03060da99ea1646abe6273",
+                "sha256_in_prefix": "4ef513b8f0b9a7e240942ce7b5031c0fae5869631a03060da99ea1646abe6273",
+                "size_in_bytes": 18688
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/text_file.py",
                 "path_type": "hardlink",
-                "sha256": "312ccfd649a31593b09eb750b2ac06dd958d6b6c10e0e5caef9277496397d398",
-                "sha256_in_prefix": "312ccfd649a31593b09eb750b2ac06dd958d6b6c10e0e5caef9277496397d398",
-                "size_in_bytes": 12100
+                "sha256": "115f210c27ad61e2aae9cfee3dfc06824530f21ba0784a1225c5e9cbf124406a",
+                "sha256_in_prefix": "115f210c27ad61e2aae9cfee3dfc06824530f21ba0784a1225c5e9cbf124406a",
+                "size_in_bytes": 12098
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/unixccompiler.py",
                 "path_type": "hardlink",
-                "sha256": "a60996779d229957c4b2126ecbe7cd5aa7115c37edfc2f3f504ad6ebc73f9f62",
-                "sha256_in_prefix": "a60996779d229957c4b2126ecbe7cd5aa7115c37edfc2f3f504ad6ebc73f9f62",
-                "size_in_bytes": 15572
+                "sha256": "83a6d77bb9cd92bc203b3ebf4e095a3208e583450f847571237e030d329e68eb",
+                "sha256_in_prefix": "83a6d77bb9cd92bc203b3ebf4e095a3208e583450f847571237e030d329e68eb",
+                "size_in_bytes": 15698
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/util.py",
                 "path_type": "hardlink",
-                "sha256": "1f0bec94cda212722f1136cf7fa344735442c6861f447f8f7eee4a5f309fe481",
-                "sha256_in_prefix": "1f0bec94cda212722f1136cf7fa344735442c6861f447f8f7eee4a5f309fe481",
-                "size_in_bytes": 18120
+                "sha256": "c16f71af32468a135faf13fec974026fb94c3010bb42d363764dc1a4930e7ceb",
+                "sha256_in_prefix": "c16f71af32468a135faf13fec974026fb94c3010bb42d363764dc1a4930e7ceb",
+                "size_in_bytes": 18093
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/version.py",
                 "path_type": "hardlink",
-                "sha256": "b5215886e2a3c689b990e34d07780e4cd7f9d9b391ab399437ae0bc454f94285",
-                "sha256_in_prefix": "b5215886e2a3c689b990e34d07780e4cd7f9d9b391ab399437ae0bc454f94285",
-                "size_in_bytes": 12648
+                "sha256": "2a56c38c0bc60726d526a443c4d2cd32f64b9795cbd853f47695638337e6d336",
+                "sha256_in_prefix": "2a56c38c0bc60726d526a443c4d2cd32f64b9795cbd853f47695638337e6d336",
+                "size_in_bytes": 12634
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/versionpredicate.py",
                 "path_type": "hardlink",
-                "sha256": "b9bdea574226c33551f887beb3d3ad37a410f87bc350fc217ec8895873c053b5",
-                "sha256_in_prefix": "b9bdea574226c33551f887beb3d3ad37a410f87bc350fc217ec8895873c053b5",
+                "sha256": "a81590eb04e3d76383cada13988c9d79f218da36f8b98d6c75b81bb8b9fe2093",
+                "sha256_in_prefix": "a81590eb04e3d76383cada13988c9d79f218da36f8b98d6c75b81bb8b9fe2093",
                 "size_in_bytes": 5205
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/zosccompiler.py",
                 "path_type": "hardlink",
-                "sha256": "98ec93617988c2ae5f13ad5eb5b8fd4260f6baede23c37ed04aa7d73539ab96d",
-                "sha256_in_prefix": "98ec93617988c2ae5f13ad5eb5b8fd4260f6baede23c37ed04aa7d73539ab96d",
-                "size_in_bytes": 6573
+                "sha256": "6dbd9d4281a7b2fe0b9a84017e3843b1a3a9b7fa7947bcbfdbc975725b661bde",
+                "sha256_in_prefix": "6dbd9d4281a7b2fe0b9a84017e3843b1a3a9b7fa7947bcbfdbc975725b661bde",
+                "size_in_bytes": 6589
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_entry_points.py",
@@ -1413,9 +1545,9 @@
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_importlib.py",
                 "path_type": "hardlink",
-                "sha256": "6569586c61e36fe4304691f7490f6ebb19ff5fe1768a1710092e47b53fd6f659",
-                "sha256_in_prefix": "6569586c61e36fe4304691f7490f6ebb19ff5fe1768a1710092e47b53fd6f659",
-                "size_in_bytes": 1468
+                "sha256": "19aa8dcc5cc5b5400f1dcdfe62b1e40a8ceaa8a37ca85cc11dca48fcc73c6430",
+                "sha256_in_prefix": "19aa8dcc5cc5b5400f1dcdfe62b1e40a8ceaa8a37ca85cc11dca48fcc73c6430",
+                "size_in_bytes": 1454
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_itertools.py",
@@ -1944,9 +2076,9 @@
             {
                 "_path": "lib/python3.12/site-packages/setuptools/command/bdist_egg.py",
                 "path_type": "hardlink",
-                "sha256": "e5ab8d6e90a103dfede90fe054520934aab2ef9064213e11f0c9afcabbedec54",
-                "sha256_in_prefix": "e5ab8d6e90a103dfede90fe054520934aab2ef9064213e11f0c9afcabbedec54",
-                "size_in_bytes": 16503
+                "sha256": "7d47afd9969734cff0830bce143b3b5e37692a3b55163e2135225898a9aaae3f",
+                "sha256_in_prefix": "7d47afd9969734cff0830bce143b3b5e37692a3b55163e2135225898a9aaae3f",
+                "size_in_bytes": 16525
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/command/bdist_rpm.py",
@@ -1958,8 +2090,8 @@
             {
                 "_path": "lib/python3.12/site-packages/setuptools/command/bdist_wheel.py",
                 "path_type": "hardlink",
-                "sha256": "08410f5aad7e1aa28c3e3ff7b2f97f48943e01569fc05ea73418b733a8a2febb",
-                "sha256_in_prefix": "08410f5aad7e1aa28c3e3ff7b2f97f48943e01569fc05ea73418b733a8a2febb",
+                "sha256": "1543f0d5ed93ba78ab55062c80593fc97953ed5cdaa7c4f24033a390cbc1b99d",
+                "sha256_in_prefix": "1543f0d5ed93ba78ab55062c80593fc97953ed5cdaa7c4f24033a390cbc1b99d",
                 "size_in_bytes": 21412
             },
             {
@@ -2000,16 +2132,16 @@
             {
                 "_path": "lib/python3.12/site-packages/setuptools/command/dist_info.py",
                 "path_type": "hardlink",
-                "sha256": "7f76e574a3b6cefad93eef5e9862e77ca243752a8bcc875516a803c37ffe2562",
-                "sha256_in_prefix": "7f76e574a3b6cefad93eef5e9862e77ca243752a8bcc875516a803c37ffe2562",
+                "sha256": "8cc42ae997d71b0ede9e526fd6ad1705398a56d57212c38b8af4bd7912d0f648",
+                "sha256_in_prefix": "8cc42ae997d71b0ede9e526fd6ad1705398a56d57212c38b8af4bd7912d0f648",
                 "size_in_bytes": 3507
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/command/easy_install.py",
                 "path_type": "hardlink",
-                "sha256": "003f47b79502ad53d640f4080d3aa4ef229d9caf55bd9543dac2e24ad0c48e8c",
-                "sha256_in_prefix": "003f47b79502ad53d640f4080d3aa4ef229d9caf55bd9543dac2e24ad0c48e8c",
-                "size_in_bytes": 87141
+                "sha256": "ad59df59181c0a52cc605554eb228e798342bf2efc6c0b714d733b6078ce9c36",
+                "sha256_in_prefix": "ad59df59181c0a52cc605554eb228e798342bf2efc6c0b714d733b6078ce9c36",
+                "size_in_bytes": 86995
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/command/editable_wheel.py",
@@ -2021,9 +2153,9 @@
             {
                 "_path": "lib/python3.12/site-packages/setuptools/command/egg_info.py",
                 "path_type": "hardlink",
-                "sha256": "eb2e59596aea7a6380a9a77d5a379a249359a52d045e1e0d9b040ae2c8cbb061",
-                "sha256_in_prefix": "eb2e59596aea7a6380a9a77d5a379a249359a52d045e1e0d9b040ae2c8cbb061",
-                "size_in_bytes": 26531
+                "sha256": "0ae2793fbc0f2104ee1fa0237db68625eda2de0c8d6bb57ea4710b7a43f67ece",
+                "sha256_in_prefix": "0ae2793fbc0f2104ee1fa0237db68625eda2de0c8d6bb57ea4710b7a43f67ece",
+                "size_in_bytes": 26522
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/command/install.py",
@@ -2063,9 +2195,9 @@
             {
                 "_path": "lib/python3.12/site-packages/setuptools/command/register.py",
                 "path_type": "hardlink",
-                "sha256": "924dc3c5709be655d3bea9e17f0c7683aabb8b06d49a04f25d409a068a013949",
-                "sha256_in_prefix": "924dc3c5709be655d3bea9e17f0c7683aabb8b06d49a04f25d409a068a013949",
-                "size_in_bytes": 468
+                "sha256": "367b519b462d67c30e84dd239a459fc22a2088076913bd0ad596c41933e21e4d",
+                "sha256_in_prefix": "367b519b462d67c30e84dd239a459fc22a2088076913bd0ad596c41933e21e4d",
+                "size_in_bytes": 466
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/command/rotate.py",
@@ -2084,9 +2216,9 @@
             {
                 "_path": "lib/python3.12/site-packages/setuptools/command/sdist.py",
                 "path_type": "hardlink",
-                "sha256": "c4ea7e362ad3641076b7074c07c6f1554893def134aa3c9906ce31c000eb544c",
-                "sha256_in_prefix": "c4ea7e362ad3641076b7074c07c6f1554893def134aa3c9906ce31c000eb544c",
-                "size_in_bytes": 6811
+                "sha256": "1646db06bd3e7012ac0fdb0b904f31402371f94d6c65dde41a2284346274a385",
+                "sha256_in_prefix": "1646db06bd3e7012ac0fdb0b904f31402371f94d6c65dde41a2284346274a385",
+                "size_in_bytes": 6808
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/command/setopt.py",
@@ -2105,9 +2237,9 @@
             {
                 "_path": "lib/python3.12/site-packages/setuptools/command/upload.py",
                 "path_type": "hardlink",
-                "sha256": "5d3dd81557d83c0980e6a8468347ae96e53df1fb714545be3f329c38330bc54b",
-                "sha256_in_prefix": "5d3dd81557d83c0980e6a8468347ae96e53df1fb714545be3f329c38330bc54b",
-                "size_in_bytes": 462
+                "sha256": "275b468893c9310943d5221e824baed8a122635c9ca0a91a349506aa03a5fd72",
+                "sha256_in_prefix": "275b468893c9310943d5221e824baed8a122635c9ca0a91a349506aa03a5fd72",
+                "size_in_bytes": 460
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/command/upload_docs.py",
@@ -2153,9 +2285,9 @@
             {
                 "_path": "lib/python3.12/site-packages/setuptools/config/_apply_pyprojecttoml.py",
                 "path_type": "hardlink",
-                "sha256": "aec4fec3ac8fb0c12abbe008f904e6daa8586cfb717cb98494538b00232aeebf",
-                "sha256_in_prefix": "aec4fec3ac8fb0c12abbe008f904e6daa8586cfb717cb98494538b00232aeebf",
-                "size_in_bytes": 14716
+                "sha256": "a0ea293014c506cd52e47b91b0ced166ea051d42a9f1c54c15251bb12cc529d4",
+                "sha256_in_prefix": "a0ea293014c506cd52e47b91b0ced166ea051d42a9f1c54c15251bb12cc529d4",
+                "size_in_bytes": 14700
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/config/_validate_pyproject/__init__.py",
@@ -2195,51 +2327,51 @@
             {
                 "_path": "lib/python3.12/site-packages/setuptools/config/_validate_pyproject/formats.py",
                 "path_type": "hardlink",
-                "sha256": "7bd07078474652e2bf4c320bd75d48dd478d04052df0c22440eb20b00245b8c3",
-                "sha256_in_prefix": "7bd07078474652e2bf4c320bd75d48dd478d04052df0c22440eb20b00245b8c3",
-                "size_in_bytes": 12066
+                "sha256": "6d40d4b6fbe311f32b8796149b7e66962fe587de834fc4b083169baabb50d03d",
+                "sha256_in_prefix": "6d40d4b6fbe311f32b8796149b7e66962fe587de834fc4b083169baabb50d03d",
+                "size_in_bytes": 12062
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/config/expand.py",
                 "path_type": "hardlink",
-                "sha256": "1995aa138246211249e507a281c953e3d13296e54cb206794bb6b730cc74cc77",
-                "sha256_in_prefix": "1995aa138246211249e507a281c953e3d13296e54cb206794bb6b730cc74cc77",
-                "size_in_bytes": 15535
+                "sha256": "16909ec59cb05dbc4af4c68d0478147a69759d05a7515a6d28f0d7481364ac1c",
+                "sha256_in_prefix": "16909ec59cb05dbc4af4c68d0478147a69759d05a7515a6d28f0d7481364ac1c",
+                "size_in_bytes": 15527
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/config/pyprojecttoml.py",
                 "path_type": "hardlink",
-                "sha256": "6e25f386c896abbf2ef7250e7c48672648b3842ed105ae568b7ddc42b30090d0",
-                "sha256_in_prefix": "6e25f386c896abbf2ef7250e7c48672648b3842ed105ae568b7ddc42b30090d0",
-                "size_in_bytes": 17661
+                "sha256": "e980ca19388726338a19e1a17e6b805e93bf8282b214ed6612b5ca5a27a5c5f1",
+                "sha256_in_prefix": "e980ca19388726338a19e1a17e6b805e93bf8282b214ed6612b5ca5a27a5c5f1",
+                "size_in_bytes": 17653
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/config/setupcfg.py",
                 "path_type": "hardlink",
-                "sha256": "c79ec973e360aef12d0dbff2a83990820bd661f596cfde4fcb4b7e9450d82d47",
-                "sha256_in_prefix": "c79ec973e360aef12d0dbff2a83990820bd661f596cfde4fcb4b7e9450d82d47",
-                "size_in_bytes": 25608
+                "sha256": "a9de4a9cc72d58de9e97c3c24cb965adafc1d16930ac963c909e7e24f4311d77",
+                "sha256_in_prefix": "a9de4a9cc72d58de9e97c3c24cb965adafc1d16930ac963c909e7e24f4311d77",
+                "size_in_bytes": 25592
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/depends.py",
                 "path_type": "hardlink",
-                "sha256": "69058b349590b15181c18f4635a4bc35e9143ef31495b2cf901dc5d8b5fb0547",
-                "sha256_in_prefix": "69058b349590b15181c18f4635a4bc35e9143ef31495b2cf901dc5d8b5fb0547",
-                "size_in_bytes": 5563
+                "sha256": "d02fda10a9340f6ed2d539cb1e55633843e49bc903386171366be2a8fa400bc2",
+                "sha256_in_prefix": "d02fda10a9340f6ed2d539cb1e55633843e49bc903386171366be2a8fa400bc2",
+                "size_in_bytes": 5551
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/discovery.py",
                 "path_type": "hardlink",
-                "sha256": "39347b7598d761ef785e853dfa44fa9207d71204b2bf9d68d396e206f42a691b",
-                "sha256_in_prefix": "39347b7598d761ef785e853dfa44fa9207d71204b2bf9d68d396e206f42a691b",
-                "size_in_bytes": 21132
+                "sha256": "f19c67ae36db63af0b1744edb19034177613ca4eae097f924eddd4483c2c4775",
+                "sha256_in_prefix": "f19c67ae36db63af0b1744edb19034177613ca4eae097f924eddd4483c2c4775",
+                "size_in_bytes": 21124
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/dist.py",
                 "path_type": "hardlink",
-                "sha256": "5f88a6c62200c066b48b450957eb85e0d22601815c7d27236b6f594cc8a525dc",
-                "sha256_in_prefix": "5f88a6c62200c066b48b450957eb85e0d22601815c7d27236b6f594cc8a525dc",
-                "size_in_bytes": 37960
+                "sha256": "baf10b95fbdb56a7a54cb375dbc50e121c8be8dbfb52b8d24cf459e71f37ea63",
+                "sha256_in_prefix": "baf10b95fbdb56a7a54cb375dbc50e121c8be8dbfb52b8d24cf459e71f37ea63",
+                "size_in_bytes": 37933
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/errors.py",
@@ -2251,16 +2383,16 @@
             {
                 "_path": "lib/python3.12/site-packages/setuptools/extension.py",
                 "path_type": "hardlink",
-                "sha256": "c5a6c3ea8cc4759cb71f83be4cb3ba7cfe165be4530cc67be964d26dd9a22154",
-                "sha256_in_prefix": "c5a6c3ea8cc4759cb71f83be4cb3ba7cfe165be4530cc67be964d26dd9a22154",
-                "size_in_bytes": 5807
+                "sha256": "b8e0adf851ebcca4d9c7377830b4887cf577713ffdb8f2622f7abf678af5e21a",
+                "sha256_in_prefix": "b8e0adf851ebcca4d9c7377830b4887cf577713ffdb8f2622f7abf678af5e21a",
+                "size_in_bytes": 5794
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/extern/__init__.py",
                 "path_type": "hardlink",
-                "sha256": "3487f92fe44a2237bde93016d58239ce052e66a03e9b97dd80b3d31064ac4b03",
-                "sha256_in_prefix": "3487f92fe44a2237bde93016d58239ce052e66a03e9b97dd80b3d31064ac4b03",
-                "size_in_bytes": 2740
+                "sha256": "36ef7b9c93787039be996bf796db239076380bda39f605b8e7dcdb9750baa696",
+                "sha256_in_prefix": "36ef7b9c93787039be996bf796db239076380bda39f605b8e7dcdb9750baa696",
+                "size_in_bytes": 2728
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/glob.py",
@@ -2335,23 +2467,23 @@
             {
                 "_path": "lib/python3.12/site-packages/setuptools/msvc.py",
                 "path_type": "hardlink",
-                "sha256": "32a999dc03dd7fe2ab54db4f57383fe6273b3647d1bddbafe950c6d94b624376",
-                "sha256_in_prefix": "32a999dc03dd7fe2ab54db4f57383fe6273b3647d1bddbafe950c6d94b624376",
-                "size_in_bytes": 47506
+                "sha256": "b625e9f8de6e451dc65f12ac3a59999c2c63f9038fdf3d9ce6ec3a0989a52fc7",
+                "sha256_in_prefix": "b625e9f8de6e451dc65f12ac3a59999c2c63f9038fdf3d9ce6ec3a0989a52fc7",
+                "size_in_bytes": 47532
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/namespaces.py",
                 "path_type": "hardlink",
-                "sha256": "865adff1110e2912bd5edb6935b7e8be4e16c0640b07b2843ad7ef11e1c2d98b",
-                "sha256_in_prefix": "865adff1110e2912bd5edb6935b7e8be4e16c0640b07b2843ad7ef11e1c2d98b",
-                "size_in_bytes": 3131
+                "sha256": "3e978df353596b0cacafcf00a425a01acbcd05c31f1d9735630f0fa7d8c03de9",
+                "sha256_in_prefix": "3e978df353596b0cacafcf00a425a01acbcd05c31f1d9735630f0fa7d8c03de9",
+                "size_in_bytes": 3128
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/package_index.py",
                 "path_type": "hardlink",
-                "sha256": "457473de808aacf8bc1a1d524da87958cc8202ab34531e16ddb2a7c91c513b9b",
-                "sha256_in_prefix": "457473de808aacf8bc1a1d524da87958cc8202ab34531e16ddb2a7c91c513b9b",
-                "size_in_bytes": 39111
+                "sha256": "32e1ee7d5f947e3e6ef895bf6c007be0f21ac8142cd74f6df38d00a7858bc364",
+                "sha256_in_prefix": "32e1ee7d5f947e3e6ef895bf6c007be0f21ac8142cd74f6df38d00a7858bc364",
+                "size_in_bytes": 39081
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/sandbox.py",
@@ -2634,6 +2766,66 @@
                 "path_type": "pyc_file"
             },
             {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/__pycache__/__init__.cpython-312.pyc",
+                "path_type": "pyc_file"
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/__init__.cpython-312.pyc",
+                "path_type": "pyc_file"
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/_elffile.cpython-312.pyc",
+                "path_type": "pyc_file"
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/_manylinux.cpython-312.pyc",
+                "path_type": "pyc_file"
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/_musllinux.cpython-312.pyc",
+                "path_type": "pyc_file"
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/_parser.cpython-312.pyc",
+                "path_type": "pyc_file"
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/_structures.cpython-312.pyc",
+                "path_type": "pyc_file"
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/_tokenizer.cpython-312.pyc",
+                "path_type": "pyc_file"
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/markers.cpython-312.pyc",
+                "path_type": "pyc_file"
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/metadata.cpython-312.pyc",
+                "path_type": "pyc_file"
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/requirements.cpython-312.pyc",
+                "path_type": "pyc_file"
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/specifiers.cpython-312.pyc",
+                "path_type": "pyc_file"
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/tags.cpython-312.pyc",
+                "path_type": "pyc_file"
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/utils.cpython-312.pyc",
+                "path_type": "pyc_file"
+            },
+            {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/_vendor/packaging/__pycache__/version.cpython-312.pyc",
+                "path_type": "pyc_file"
+            },
+            {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/archive_util.cpython-312.pyc",
                 "path_type": "pyc_file"
             },
@@ -2746,6 +2938,10 @@
                 "path_type": "pyc_file"
             },
             {
+                "_path": "lib/python3.12/site-packages/setuptools/_distutils/compat/__pycache__/py39.cpython-312.pyc",
+                "path_type": "pyc_file"
+            },
+            {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/config.cpython-312.pyc",
                 "path_type": "pyc_file"
             },
@@ -2803,14 +2999,6 @@
             },
             {
                 "_path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/msvccompiler.cpython-312.pyc",
-                "path_type": "pyc_file"
-            },
-            {
-                "_path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/py38compat.cpython-312.pyc",
-                "path_type": "pyc_file"
-            },
-            {
-                "_path": "lib/python3.12/site-packages/setuptools/_distutils/__pycache__/py39compat.cpython-312.pyc",
                 "path_type": "pyc_file"
             },
             {
@@ -3350,11 +3538,11 @@
     },
     "platform": null,
     "requested_spec": "",
-    "sha256": "a43d33436f4ac57ebd6ee15f700b33b26a2d37b7e43981b1fa036908579dafd6",
-    "size": 495951,
+    "sha256": "354781a1ce4f8f229bf4a19fe48550d5f73d5b511df78a07b1b78fb2c78e52ad",
+    "size": 497302,
     "subdir": "noarch",
-    "timestamp": 1718881009207,
+    "timestamp": 1720588032670,
     "track_features": "",
-    "url": "https://conda.anaconda.org/conda-forge/noarch/setuptools-70.1.0-pyhd8ed1ab_0.conda",
-    "version": "70.1.0"
+    "url": "https://conda.anaconda.org/conda-forge/noarch/setuptools-70.2.0-pyhd8ed1ab_0.conda",
+    "version": "70.2.0"
 }
