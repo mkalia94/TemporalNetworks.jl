@@ -4,7 +4,11 @@
 
 This package is not yet listed in Julia and this section will thus be updated in the future. Please obtain the latest version of Julia from [here](https://julialang.org/downloads/). Next download the package zip file from GitHub and from the directory run `julia` in the Terminal. Next run,
 
+<<<<<<< HEAD
 ```julia
+=======
+```@julia
+>>>>>>> 38578718ebde9cbf0c83c35d19e4db33a19f2d48
 julia> ] activate .
 
 julia> ] instantiate
@@ -18,7 +22,11 @@ A multiplex graph can be supplied as a vector of `Float64` matrices or by using 
 
 Here is a simple example that constructs and analyses a simple multiplex graph,
 
+<<<<<<< HEAD
 ```julia
+=======
+```@julia
+>>>>>>> 38578718ebde9cbf0c83c35d19e4db33a19f2d48
 using TemporalNetworks
 list = [0,2]
 η = 0.8
@@ -37,7 +45,11 @@ W1 = block()
 
 The `MultilayerGraph` instance builds a temporal network using a connection rule, of type `TemporalConnectivity`. The default is `Multiplex`.
 
+<<<<<<< HEAD
 ```julia
+=======
+```@julia
+>>>>>>> 38578718ebde9cbf0c83c35d19e4db33a19f2d48
 mlgraph = MultilayerGraph(W1, connect = Multiplex())
 ```
  One can visualize say the final layer using `plot(mlgraph,17)`
@@ -50,7 +62,11 @@ The `SpectralPartition` and `SEBAPartition` are the most important instances tha
 
 To compute a spectral partition simply run,
 
+<<<<<<< HEAD
 ```julia
+=======
+```@julia
+>>>>>>> 38578718ebde9cbf0c83c35d19e4db33a19f2d48
 partition = SpectralPartition(mlgraph)
 ```
 
@@ -60,6 +76,7 @@ The object `partition` contains the supra-Laplacian elements, the graph object `
 
 The infomation in `partition` is plotted using the `plots` command as follows,
 
+<<<<<<< HEAD
 ```julia
 p1, p2 = plot(partition)
 plot(p1)
