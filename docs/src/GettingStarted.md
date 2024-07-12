@@ -42,7 +42,7 @@ mlgraph = MultilayerGraph(W1, connect = Multiplex())
 ```
  One can visualize say the final layer using `plot(mlgraph,17)`
 
-![](figs/graph.png)
+![](figs/graph.svg)
 
 ## Spectral Partitions and SEBA
 
@@ -66,8 +66,8 @@ plot(p1)
 plot(p2)
 ```
 
-![](figs/evecs.png)
-![](figs/evals.png)
+![](figs/evecs.svg)
+![](figs/evals.svg)
 
 
 The eigenvectors 2 and 4 store (corresponding to the first two nontrivial spatial eigenvectors) important information about the partition. The partition elements embedded in the eigenvectors `evecs` are disentangled using the SEBA algorithm as follows,
@@ -85,8 +85,8 @@ plot(p1...)
 plot(p2)
 ```
 
-![](figs/SEBA.png)
-![](figs/Ratios.png)
+![](figs/SEBA.svg)
+![](figs/Ratios.svg)
 
 We see that the first three SEBA vectors are meaninful, while the last vector corresponds to a very high Cheeger ratio. Thus this is discarded. Finally the network partition can be plotted as follows,
 
@@ -94,7 +94,7 @@ We see that the first three SEBA vectors are meaninful, while the last vector co
 plot(seba_part, [1,2,3]) # 4 is removed as it is not meaningful
 ```
 
-![](figs/heatmap.png)
+![](figs/heatmap.svg)
 
 ## Comparison with existing methods
 
@@ -110,4 +110,4 @@ This calls the Leiden algorithm on `partition.graph` and computes a slice-by-sli
 heatmap(leiden_partition[2], c=cgrad([:white, :orange, :red]), size=(400,300), dpi=300)
 ```
 
-![](figs/leiden-slice.png)
+![](figs/leiden-slice.svg)

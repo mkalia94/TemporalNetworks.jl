@@ -11,23 +11,23 @@ seba_part = SEBAPartition(partition,2)
 
 p = [plot(mlgraph,x) for x in 1:5:mlgraph.T]
 plot(p..., dpi=300, size = (700,400))
-savefig("figs/graph.png")
+savefig("figs/graph.svg")
 
 plot(plot(partition)[1][1:6]..., size = (700,400), dpi=300)
-savefig("figs/evecs.png")
+savefig("figs/evecs.svg")
 
 plot(plot(partition)[2], size = (350,250), dpi=300)
-savefig("figs/evals.png")
+savefig("figs/evals.svg")
 
 plot(plot(seba_part)[2], size=(400,300), dpi=300)
-savefig("figs/Ratios.png")
+savefig("figs/Ratios.svg")
 
 plot(plot(seba_part)[1]..., size=(700,400), dpi=300)
-savefig("figs/SEBA.png")
+savefig("figs/SEBA.svg")
 
 plot(seba_part,[1,2,3], dpi=300)
-savefig("figs/heatmap.png")
+savefig("figs/heatmap.svg")
 
 xx = leiden_slice(partition)
 heatmap(xx[2], c=cgrad([:white, :orange, :red]), size=(400,300), dpi=300)
-savefig("figs/leiden-slice.png")
+savefig("figs/leiden-slice.svg")
