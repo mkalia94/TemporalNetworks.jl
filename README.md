@@ -11,7 +11,7 @@ Simple example:
 - Construct a spacetime network with a cluster transition architecture:
 
 ```julia
-list = [0,1,2] # Transitition from unclustered to two emerging clusters.
+list = [0,2] # Transitition from unclustered to two emerging clusters.
 degrees = nothing; η = 0.8; clusters = nothing
 block = BlockGraph(20, 15, list, η, clusters, degrees)
 W1 = block()
