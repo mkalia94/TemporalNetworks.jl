@@ -4,7 +4,7 @@
 
 This package is not yet listed in Julia and this section will thus be updated in the future. Please obtain the latest version of Julia from [here](https://julialang.org/downloads/). Next download the package zip file from GitHub and from the directory run `julia` in the Terminal. Next run,
 
-```@julia
+```julia
 julia> ] activate .
 
 julia> ] instantiate
@@ -18,7 +18,7 @@ A multiplex graph can be supplied as a vector of `Float64` matrices or by using 
 
 Here is a simple example that constructs and analyses a simple multiplex graph,
 
-```@julia
+```julia
 using TemporalNetworks
 list = [0,2]
 η = 0.8
@@ -37,7 +37,7 @@ W1 = block()
 
 The `MultilayerGraph` instance builds a temporal network using a connection rule, of type `TemporalConnectivity`. The default is `Multiplex`.
 
-```@julia
+```julia
 mlgraph = MultilayerGraph(W1, connect = Multiplex())
 ```
  One can visualize say the final layer using `plot(mlgraph,17)`
@@ -50,7 +50,7 @@ The `SpectralPartition` and `SEBAPartition` are the most important instances tha
 
 To compute a spectral partition simply run,
 
-```@julia
+```julia
 partition = SpectralPartition(mlgraph)
 ```
 
@@ -60,7 +60,7 @@ The object `partition` contains the supra-Laplacian elements, the graph object `
 
 The infomation in `partition` is plotted using the `plots` command as follows,
 
-```@julia
+```julia
 p1, p2 = plot(partition)
 plot(p1)
 plot(p2)
@@ -73,13 +73,13 @@ plot(p2)
 The eigenvectors 2 and 4 store (corresponding to the first two nontrivial spatial eigenvectors) important information about the partition. The partition elements embedded in the eigenvectors `evecs` are disentangled using the SEBA algorithm as follows,
 
 
-```@julia
+```julia
 seba_part = SEBAPartition(partition,2)
 ```
 
 This automatically detects the leading two non-trivial spatial eigenvectors and runs SEBA on the corresponding eigenvectors. It computes the corresponding SEBA vectors and computes the corresponding Cheeger ratios stored in `seba_part.cuts`. The vectors can be plotted as follows,
 
-```@julia
+```julia
 p1,p2 = plot(seba_part)
 plot(p1...)
 plot(p2)
@@ -90,7 +90,7 @@ plot(p2)
 
 We see that the first three SEBA vectors are meaninful, while the last vector corresponds to a very high Cheeger ratio. Thus this is discarded. Finally the network partition can be plotted as follows,
 
-```@julia
+```julia
 plot(seba_part, [1,2,3]) # 4 is removed as it is not meaningful
 ```
 
@@ -100,13 +100,13 @@ plot(seba_part, [1,2,3]) # 4 is removed as it is not meaningful
 
 The Leiden algorithm can be called from the Python package `leidenalg` via `PyCall` as follows,
 
-```@julia
+```julia
 leiden_partition = leiden_slice(partition)
 ```
 
 This calls the Leiden algorithm on `partition.graph` and computes a slice-by-slice Leiden partition, which is stitched together by solving the minimum edge-weight cover problem on the super graph of clusters. Finally, the Leiden partition is plotted using,
 
-```@julia
+```julia
 heatmap(leiden_partition[2], c=cgrad([:white, :orange, :red]), size=(400,300), dpi=300)
 ```
 
