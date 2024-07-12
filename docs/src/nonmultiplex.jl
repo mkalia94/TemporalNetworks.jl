@@ -17,17 +17,17 @@ partition_nonmultiplex = SpectralPartition(mlgraph_nonmultiplex, compute_a = Ray
 seba_part_nonmultiplex = SEBAPartition(partition_nonmultiplex,[2,])
 
 plot(plot(partition_nonmultiplex)[1][1:6]..., size = (700,400), dpi=300)
-savefig("figs/evecs_nonm.png")
+savefig("figs/evecs_nonm.svg")
 
 plot(plot(partition_nonmultiplex)[2], size = (350,250), dpi=300)
-savefig("figs/evals_nonm.png")
+savefig("figs/evals_nonm.svg")
 
 plot(plot(seba_part_nonmultiplex)..., size=(700,400), dpi=300)
-savefig("figs/SEBA_nonm.png")
+savefig("figs/SEBA_nonm.svg")
 
 plot(seba_part_nonmultiplex,[1,2], dpi=300)
-savefig("figs/heatmap_nonm.png")
+savefig("figs/heatmap_nonm.svg")
 
 xx = leiden_slice(partition_nonmultiplex)
 heatmap(xx[2], c=cgrad([:white, :orange, :red]), size=(400,300), dpi=300)
-savefig("figs/leiden-slice-nonm.png")
+savefig("figs/leiden-slice-nonm.svg")

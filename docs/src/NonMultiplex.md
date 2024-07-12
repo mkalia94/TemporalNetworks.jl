@@ -2,7 +2,7 @@
 
 In the previous section we looked at spectral partitions of multiplex networks. The same instances can be extended to nonmultiplex types. Here an example of a staircase graph is presented, which is non-multiplex in nature and can be constructed via the `BlockGraphNonMultiplex` instance as follows,
 
-```@julia
+```julia
 η = 0.8
 list = [2,1]
 clusters = [[Array(1:5), Array(6:20), Array(21:25)],
@@ -22,7 +22,7 @@ One then uses the instances `MultilayerGraph`, `SpectralPartition` and `SEBAPart
 
     To compute spectral partitions using `SpectralPartition`, one must compute the diffusion parameter ``a``, which is done by default using `SpatTempMatching`. Although this may also work with nonmultiplex networks, it is advisable to use `RayleighBalancing(x)` where `x` is an appropriately chosen eigenvalue index for Rayleigh balancing.
 
-```@julia
+```julia
 mlgraph_nonmultiplex = MultilayerGraph(W2, connect = NonMultiplexCompressed())
 partition_nonmultiplex = SpectralPartition(mlgraph_nonmultiplex, compute_a = RayleighBalancing(3)) # Rayleigh balancing on third eigenvalue
 seba_part_nonmultiplex = SEBAPartition(partition_nonmultiplex,[2,])
@@ -30,15 +30,15 @@ seba_part_nonmultiplex = SEBAPartition(partition_nonmultiplex,[2,])
 
 Similar to before, one can plot eigenvectors, eigenvalues and SEBA vectors.
 
-```@julia
+```julia
 plot(plot(partition_nonmultiplex)[1][1:6]...)
 plot(plot(partition_nonmultiplex)[2])
 plot(plot(seba_part_nonmultiplex)...)
 ```
 
-![](figs/evecs_nonm.png)
-![](figs/evals_nonm.png)
-![](figs/SEBA_nonm.png)
+![](figs/evecs_nonm.svg)
+![](figs/evals_nonm.svg)
+![](figs/SEBA_nonm.svg)
 
 
 
