@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.42
+# v0.19.43
 
 using Markdown
 using InteractiveUtils
@@ -30,7 +30,7 @@ end
 # Now we plot eigenvectors of the inflated dynamic Laplacian to select vectors which will induce the desired spacetime partition. 
 
 # ╔═╡ 5a598148-8abe-41ef-9239-2465a1b66231
-h = plot(partition); plot(h[1:4]...)
+h = plot(partition); plot(h[1][1:4]...)
 
 # ╔═╡ a791feb8-88d4-47d4-81ea-c9b8faaf8497
 # Clearly evec 3 is the first `spatial' eigenvector, which we use to construct the spacetime Laplacian. First, we carefully reorder vertices according to their temporal mean values, for visual convenience.
@@ -95,7 +95,7 @@ end
 # Next, similar to the senator case, we plot eigenvectors of the inflated dynamic Laplacian corresponding to the state network.
 
 # ╔═╡ 14d35b45-a8a0-49d0-9c0d-4eeebbf04a45
-h_state = plot(partition_state); plot(h_state[1:4]...)
+h_state = plot(partition_state); plot(h_state[1][1:4]...)
 
 # ╔═╡ bf0d84f3-8246-412c-a4df-bd3e63e6c597
 # Clearly the first spatial eigenvector is the second one (note that this is a multiplex network as opposed to the senator case). Thus we use the second eigenvector for spectral partitioning. We reorder the state vertices as well, by the magnitude of the eigenvector at the last time step.
