@@ -26,6 +26,16 @@ begin
 	partition = SpectralPartition(mlgraph, compute_a = RayleighBalancing(2))
 end
 
+# ╔═╡ 65b1a46e-19ca-458d-9bbe-6b52982248af
+begin
+	using LinearAlgebra
+	idl = partition.L_spat + partition.a^2 .* partition.L_temp
+    min_deg = minimum(diag(idl))
+    max_deg = maximum(diag(idl))
+	ind_new = findall(x->(x ≥ max_deg || x ≤ min_deg), partition.evals)
+end
+
+
 # ╔═╡ 9ac21e96-8cb4-4f73-8605-637247ed99ef
 # Now we plot eigenvectors of the inflated dynamic Laplacian to select vectors which will induce the desired spacetime partition. 
 
@@ -163,6 +173,9 @@ end
 
 
 
+# ╔═╡ 1ed90162-70c8-452b-aebf-70a974721910
+maximum(partition.evals)
+
 # ╔═╡ Cell order:
 # ╠═c558534e-c1e5-41af-93b2-69a16ebe0af9
 # ╠═812e0004-32d8-11ef-37e6-1d4b240c9a4b
@@ -188,3 +201,5 @@ end
 # ╠═3b358fd4-15a5-401c-9fed-9128aceefc48
 # ╠═a5b645f8-0525-4752-83d2-60818f05f852
 # ╠═d7dd157a-97a9-4821-8361-92defca202dc
+# ╠═65b1a46e-19ca-458d-9bbe-6b52982248af
+# ╠═1ed90162-70c8-452b-aebf-70a974721910
