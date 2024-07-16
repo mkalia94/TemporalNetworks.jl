@@ -24,7 +24,7 @@ for i in 1:100
         idl = partition.L_spat + partition.a^2 .* partition.L_temp
         min_deg = minimum(diag(idl))
         max_deg = maximum(diag(idl))
-        @show ind = findall(x->(x ≤ min_deg && x ≥ max_deg), partition.evals)
+        @show ind = findall(x-> (x <= min_deg), partition.evals)
         push!(counts, length(ind)/mlgraph.N/mlgraph.T)
     catch e
         @show e
