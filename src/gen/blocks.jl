@@ -122,7 +122,7 @@ function set_block_slice_fromscratch(N,bl :: A, ind_block) where A <: Block
         max_degree = 4
     end
 
-    println("------- $(n) clusters of size $(size_) each with remaining $(N-n*size_) nodes of degree $(max_degree) -------- ")
+    # println("------- $(n) clusters of size $(size_) each with remaining $(N-n*size_) nodes of degree $(max_degree) -------- ")
 
     # 2. Project clusters onto labelled nodes
     nodes = Array(1:N)
@@ -132,12 +132,12 @@ function set_block_slice_fromscratch(N,bl :: A, ind_block) where A <: Block
         rest_ind = shuffle(nodes[1:N - size_rest - 1])[1]
         rest_ind = Array(rest_ind:(rest_ind + size_rest - 1))
         push!(clusters, nodes[rest_ind])
-        println("Cluster 1: $(clusters[1])")
+        # println("Cluster 1: $(clusters[1])")
         comm_ind = mod1(rest_ind[end] + 1, N)
         for i in 1:n
             ind = mod1.(Array(comm_ind: comm_ind + size_-1),N)
             push!(clusters, nodes[ind])
-            println("Cluster $(i+1): $(clusters[i+1])")
+            # println("Cluster $(i+1): $(clusters[i+1])")
             comm_ind = comm_ind + size_
         end
         W = zeros(N,N)
