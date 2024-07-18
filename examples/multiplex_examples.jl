@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.42
+# v0.19.43
 
 using Markdown
 using InteractiveUtils
@@ -34,13 +34,13 @@ end
 # Plot leading evecs of the supra Laplacian
 
 # ╔═╡ cb73e5c2-b133-430e-9ca3-d052b7262bba
-plot(plot(partition)[1:6]...)
+plot(plot(partition)[1][1:6]...)
 
 # ╔═╡ 15b20c67-a92b-401c-81ff-11e7209afdd2
 # Perform SEBA (with doubling) of the leading spatial eigenvector.
 
 # ╔═╡ daa0159f-da2b-4bb3-8abc-51ed89124b25
-plot(plot(seba_part)...)
+plot(plot(seba_part)[1]...)
 
 # ╔═╡ 9d67cfd0-d114-4bc9-b765-afe8b2221469
 # Example 2: Transition from unclustered to single appearing cluster that disintegrates into two clusters further.
@@ -66,13 +66,13 @@ end
 # Plot leading eigenvectors of the supra-Laplacian
 
 # ╔═╡ 3c421c9d-28d0-48c2-983f-225982a5be08
-plot(plot(partition_2)[1:6]...)
+plot(plot(partition_2)[1][1:6]...)
 
 # ╔═╡ b0640fd6-7d34-4336-b585-6042650172ba
 # Plot SEBA vectors (SEBA performed with doubling) corresponding to the first three  spatial evecs of the supra-Laplacian.
 
-# ╔═╡ 667383f9-6118-47a7-b582-ffb74c3574b0
-plot(plot(seba_part_2)...)
+# ╔═╡ 41e7fdb1-e74b-4969-a582-551b2c4e63fc
+plot(plot(seba_part_2)[1]...)
 
 # ╔═╡ Cell order:
 # ╠═980691f0-3ec3-11ef-0ef1-e7653399f7de
@@ -91,4 +91,4 @@ plot(plot(seba_part_2)...)
 # ╠═f6ece308-8af8-4926-a4c3-a67c6da63456
 # ╠═3c421c9d-28d0-48c2-983f-225982a5be08
 # ╠═b0640fd6-7d34-4336-b585-6042650172ba
-# ╠═667383f9-6118-47a7-b582-ffb74c3574b0
+# ╠═41e7fdb1-e74b-4969-a582-551b2c4e63fc

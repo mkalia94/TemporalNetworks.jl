@@ -8,9 +8,16 @@ clusters = [[Array(1:5), Array(6:20), Array(21:25)],
 degrees = [[4,6,4],
         [6,6]] # Ignore this line
 evolve = 1
-block = BlockGraphNonMultiplex(25, 10, list, η, clusters, degrees, evolve)
-W2 = block() |> Vector{Matrix{Float64}}
 
+# list = [2,1]
+# clusters = [[Array(1:25), Array(26:200), Array(201:225)],
+#                 [Array(1:10), Array(11:20)]] # you can ignore this line
+# degrees = [[16,50,16],
+#         [6,6]] # Ignore this line
+# η = 0.8
+# evolve = 5
+block = BlockGraphNonMultiplex(225, 10, list, η, clusters, degrees, evolve)
+W2 = block() |> Vector{Matrix{Float64}}
 
 mlgraph_nonmultiplex = MultilayerGraph(W2, connect = NonMultiplexCompressed())
 partition_nonmultiplex = SpectralPartition(mlgraph_nonmultiplex, compute_a = RayleighBalancing(3)) # Rayleigh balancing on third eigenvalue

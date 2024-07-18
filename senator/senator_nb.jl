@@ -176,6 +176,9 @@ end
 # ╔═╡ 1ed90162-70c8-452b-aebf-70a974721910
 maximum(partition.evals)
 
+# ╔═╡ 1e62969b-0064-477a-9519-015387d7f646
+partition_state.a
+
 # ╔═╡ Cell order:
 # ╠═c558534e-c1e5-41af-93b2-69a16ebe0af9
 # ╠═812e0004-32d8-11ef-37e6-1d4b240c9a4b
@@ -203,3 +206,4 @@ maximum(partition.evals)
 # ╠═d7dd157a-97a9-4821-8361-92defca202dc
 # ╠═65b1a46e-19ca-458d-9bbe-6b52982248af
 # ╠═1ed90162-70c8-452b-aebf-70a974721910
+# ╠═1e62969b-0064-477a-9519-015387d7f646
