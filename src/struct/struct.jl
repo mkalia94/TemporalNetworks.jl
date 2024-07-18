@@ -8,7 +8,7 @@ Normalizes Laplacian with resepct to the standard normalization ``D^{-1/2}LD^{-1
 struct DegreeNormalization <: Normalization end
 
 function (::DegreeNormalization)(L :: Matrix)
-    sqrt.(deg(L))*L*sqrt.(deg(L))
+    inv(sqrt.(deg(L)))*L*inv(sqrt.(deg(L)))
 end
 
 """

@@ -30,7 +30,7 @@ function _RayleighBalancing(mlgraph :: MultilayerGraph ,norm :: Normalization, L
     evecs = eigvecs(infL)
     rayleigh_spat = [sum((L_spat*evecs[:,i]) .* evecs[:,i]) for i in 1:10]
     rayleigh_temp  = [a^2 * sum((L_temp*evecs[:,i]) .* evecs[:,i]) for i in 1:10]
-    rayleigh_spat .- rayleigh_temp
+    rayleigh_spat ./ rayleigh_temp .- 1
 end
 
 

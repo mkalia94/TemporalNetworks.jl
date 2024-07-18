@@ -19,7 +19,7 @@ which are tested for in the above order. Therefore, care should be taken not to 
 
 """
 function bisection(f, a::Real, b::Real; fa::Real = f(a), fb::Real = f(b),
-                   ftol = √eps(), wtol = 1e-6, maxiter = 1000)
+                   ftol = 1e-8, wtol = 1e-12, maxiter = 1000)
     @assert fa * fb ≤ 0 "initial values don't bracket zero"
     @assert isfinite(a) && isfinite(b)
     _bisection(f, float.(promote(a, b, fa, fb, ftol, wtol))..., maxiter)
