@@ -2,6 +2,7 @@
 
 [![Build Status](https://github.com/mkalia94/TemporalNetworks.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/mkalia94/TemporalNetworks.jl/actions/workflows/CI.yml?query=branch%3Amain)
 [![](https://img.shields.io/badge/docs-dev-blue.svg)](https://mkalia.com/TemporalNetworks.jl/dev/)
+[![codecov](https://codecov.io/github/mkalia94/TemporalNetworks.jl/graph/badge.svg?token=9RW7RQJFY5)](https://codecov.io/github/mkalia94/TemporalNetworks.jl)
 
 `TemporalNetworks.jl` is a package to construct and analyze graphs/networks that vary in time. The instances `MultilayerGraph`, `SpectralPartition` and `SEBAPartition`  construct temporal networks, find partitions using spacetime spectral partitioning and disentangle them using SEBA respectively. More details in the [![](https://img.shields.io/badge/docs-dev-blue.svg)](https://mkalia.com/TemporalNetworks.jl/dev/).
 
