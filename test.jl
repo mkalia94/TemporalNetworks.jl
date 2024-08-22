@@ -18,14 +18,14 @@ block = BlockGraph(20, 15, list, η, clusters, degrees)
 W1 = block()
 
 # Block graphs nonmultiplex
-η = 0.8
+η = 0.5
 list = [2,1]
 clusters = [[Array(1:5), Array(6:20), Array(21:25)],
                 [Array(1:10), Array(11:20)]] # you can ignore this line
 degrees = [[4,6,4],
         [6,6]] # Ignore this line
 evolve = 1
-block = BlockGraphNonMultiplex(25, 10, list, η, clusters, degrees, evolve)
+block = BlockGraphNonMultiplex(25, 5, list, η, clusters, degrees, evolve)
 W2 = block() |> Vector{Matrix{Float64}}
 
 
@@ -50,3 +50,17 @@ p5_1, p5_2 = plot(seba_part)
 p6_1 = plot(seba_part_nonmultiplex)
 
 
+η = 0.8
+list = [2,1]
+clusters = [[Array(1:2), Array(3:6), Array(7:8)],
+                [Array(1:10), Array(11:20)]] # you can ignore this line
+degrees = [[1,3,1],
+        [6,6]] # Ignore this line
+evolve = 1
+block = BlockGraphNonMultiplex(8, 2, list, η, clusters, degrees, evolve)
+W2 = block() |> Vector{Matrix{Float64}}
+
+
+mlgraph_nonmultiplex_new = MultilayerGraph(W2, connect = NonMultiplexCompressed())
+partition_nonmultiplex_new = SpectralPartition(mlgraph_nonmultiplex_new, compute_a = RayleighBalancing(3)) # rayleigh balancing on third eigenvalue
+p3_1, p3_2 = plot(partition_nonmultiplex_new,5)
