@@ -3,15 +3,13 @@ Pkg.activate(".")
 
 using TemporalNetworks, Plots
 
-list = [0,1,2]
-clusters = [[Array(1:20)],
-            [Array(1:10), Array(11:20)],
-            [Array(1:10), Array(11:15), Array(16:20)] ]
-degrees = [[14],[6,6],
-           [6,4,4]]
+list = [0,1]
+clusters = [[Array(1:5)],
+            [Array(1:3), Array(4:5)]]
+degrees = [[4],[2,1]]
 η = 0.8
-N = 20
-T = 50
+N = 5
+T = 10
 
 block = BlockGraph(N, T, list, η, clusters, degrees)
 W1 = block()
@@ -29,5 +27,7 @@ mlgraph = MultilayerGraph(W1)
 @info "T = $(mlgraph.T)"
 partition = SpectralPartition(mlgraph)
 partition_norm = SpectralPartition(mlgraph, partition.a, norm = DegreeNormalization())
-plot(partition.evals[1:20] ./ partition.a^2 ./2)
-plot!(partition_norm.evals[1:20]); gui()
+p1 = plot(partition.evals[1:20] ./ partition.a^2 ./2)
+plot!(partition_norm.evals[1:20])
+
+
