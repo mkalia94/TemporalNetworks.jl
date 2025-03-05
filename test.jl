@@ -1,5 +1,5 @@
 using Pkg; Pkg.activate(".")
-using TemporalNetworks
+using TemporalNetworks, Plots
 
 
 #Notes: using MultilayerGraph, SpectralPartition, SEBAPartition we 
@@ -20,13 +20,13 @@ W1 = block()
 # Block graphs nonmultiplex
 η = 0.8
 list = [2,1]
-clusters = [[Array(1:5), Array(6:20), Array(21:25)],
+clusters = [[Array(1:25), Array(26:200), Array(201:225)],
                 [Array(1:10), Array(11:20)]] # you can ignore this line
-degrees = [[4,6,4],
+degrees = [[16,50,16],
         [6,6]] # Ignore this line
-evolve = 1
-block = BlockGraphNonMultiplex(25, 10, list, η, clusters, degrees, evolve)
-W2 = block() |> Vector{Matrix{Float64}}
+evolve = 5
+block = BlockGraphNonMultiplex(225, 10, list, η, clusters, degrees, evolve)
+W2 = block() |> Vector{Matrix{Float64}} |> reverse
 
 
 # Tests for non-multiplex networks
@@ -39,7 +39,7 @@ seba_part_nonmultiplex = SEBAPartition(partition_nonmultiplex)
 # Tests for multiplex networks
 mlgraph = MultilayerGraph(W1, connect = Multiplex())
 partition_1 = SpectralPartition(mlgraph) # Classic eigenvalue matching 
-partition_2 = SpectralPartition(mlgraph, compute_a = RayleighBalancing(2)) # Rayleigh Balancing on second eigenvalue
+partition_2 = SpectralPartition(mlgraph, compute_a = RayleighBalancing(3)) # Rayleigh Balancing on second eigenvalue
 seba_part  = SEBAPartition(partition_1)
 
 p1 = plot(mlgraph, 1)

@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.43
+# v0.19.46
 
 using Markdown
 using InteractiveUtils
@@ -40,7 +40,7 @@ end
 # Now we plot eigenvectors of the inflated dynamic Laplacian to select vectors which will induce the desired spacetime partition. 
 
 # ╔═╡ 5a598148-8abe-41ef-9239-2465a1b66231
-h = plot(partition); plot(h[1][1:4]...)
+h = plot(partition); plot(h[1][1:4]..., dpi=300)
 
 # ╔═╡ a791feb8-88d4-47d4-81ea-c9b8faaf8497
 # Clearly evec 3 is the first `spatial' eigenvector, which we use to construct the spacetime Laplacian. First, we carefully reorder vertices according to their temporal mean values, for visual convenience.
@@ -162,22 +162,27 @@ end
 begin	
 	labelss = vcat([[x; ""] for x in lab_statelist[v_state]]...);
 	
-	h1 = heatmap(reshape(-partition_state.evecs[:,2],mlgraph_state.N,mlgraph_state.T)[v_state,:], c=cgrad(:RdBu), size=(600,800), yticks=(1:50,lab_statelist[v_state]), xticks=(1:2:11,1987:4:2009), dpi=300, clims = (-1,1))
+	h1 = heatmap(reshape(partition_state.evecs[:,2],mlgraph_state.N,mlgraph_state.T)[v_state,:], c=cgrad(:RdBu), size=(600,800), yticks=(1:50,lab_statelist[v_state]), xticks=(1:2:11,1987:4:2009), dpi=300, clims = (-1,1))
 	
-	h2 = heatmap(state_proj[1], c=cgrad(:RdBu), size=(600,800), yticks=(1:100,labelss), xticks=(1:2:11,1987:4:2009), dpi=300, grid=false, clims=(-1,1))
+	h2 = heatmap(-state_proj[1], c=cgrad(:RdBu), size=(600,800), yticks=(1:100,labelss), xticks=(1:2:11,1987:4:2009), dpi=300, grid=false, clims=(-1,1))
 
 	hline!(h2,0.5:2.0:(101+0.5), c=:black, labels="", lw=1)
 	
-	plot(h1, h2, size=(900,700))
+	plot(h1, h2, size=(900,700), dpi=300)
+	savefig("proj.png"); gui()
+	plot(h1, h2, size=(900,700), dpi=300)
 end
 
 
 
-# ╔═╡ 1ed90162-70c8-452b-aebf-70a974721910
-maximum(partition.evals)
+# ╔═╡ 8a088ae0-c0e3-4583-baca-8b08a41c25a1
+[isspat(mlgraph, partition.norm, partition.L_spat, partition.L_temp, partition.a, x, nothing) for x in 1:15]
 
-# ╔═╡ 1e62969b-0064-477a-9519-015387d7f646
-partition_state.a
+# ╔═╡ cdb839be-a89a-4c55-91ba-7f712f69ad7d
+s1 = SEBAPartition(partition, [3])
+
+# ╔═╡ f5156ea8-6815-42e6-9ec1-511da0b0c845
+s1.cuts
 
 # ╔═╡ Cell order:
 # ╠═c558534e-c1e5-41af-93b2-69a16ebe0af9
@@ -205,5 +210,6 @@ partition_state.a
 # ╠═a5b645f8-0525-4752-83d2-60818f05f852
 # ╠═d7dd157a-97a9-4821-8361-92defca202dc
 # ╠═65b1a46e-19ca-458d-9bbe-6b52982248af
-# ╠═1ed90162-70c8-452b-aebf-70a974721910
-# ╠═1e62969b-0064-477a-9519-015387d7f646
+# ╠═8a088ae0-c0e3-4583-baca-8b08a41c25a1
+# ╠═cdb839be-a89a-4c55-91ba-7f712f69ad7d
+# ╠═f5156ea8-6815-42e6-9ec1-511da0b0c845

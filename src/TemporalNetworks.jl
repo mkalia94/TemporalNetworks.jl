@@ -1,6 +1,6 @@
 module TemporalNetworks
 
-using LinearAlgebra, Plots, GraphRecipes, Base.Iterators, Statistics, Random, DataFrames, JuMP, HiGHS, PythonCall, CSV, StatsBase, SimpleWeightedGraphs, Parameters, ProgressMeter, CondaPkg, LaTeXStrings, StatsPlots 
+using LinearAlgebra, Plots, GraphRecipes, Base.Iterators, Statistics, Random, DataFrames, JuMP, HiGHS, PythonCall, CSV, StatsBase, SimpleWeightedGraphs, Parameters, ProgressMeter, CondaPkg, LaTeXStrings, StatsPlots, SparseArrays, KrylovKit 
 
 include("struct/struct.jl")
 include("struct/multilayer.jl")

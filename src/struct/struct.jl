@@ -7,7 +7,7 @@ Normalizes Laplacian with resepct to the standard normalization ``D^{-1/2}LD^{-1
 """
 struct DegreeNormalization <: Normalization end
 
-function (::DegreeNormalization)(L :: Matrix)
+function (::DegreeNormalization)(L :: Union{Matrix, SparseMatrixCSC})
     sqrt.(deg(L))*L*sqrt.(deg(L))
 end
 
@@ -18,7 +18,7 @@ Trivial Normalization of the Laplacian. Simply returns L.
 """
 struct IdentityNormalization <: Normalization end
 
-function (::IdentityNormalization)(L :: Matrix)
+function (::IdentityNormalization)(L :: Union{Matrix, SparseMatrixCSC})
     L
 end
 

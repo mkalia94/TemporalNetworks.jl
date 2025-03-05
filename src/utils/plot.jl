@@ -10,7 +10,7 @@ function plot(mlgraph :: MultilayerGraph{T}, layer :: Int64; labels = nothing, k
     edge_color!(W, mlgraph.T, layer, edge_colors) 
     node_colors = isnothing(labels) ? Int64.(ones(length(ind_active))) :  color_vector(Int64.(labels[:,layer]))[ind_active]
     
-    g = graphplot(W(layer), names=nm,nodesize=0.2,method = :circular, nodeshape = :circle,  edgecolor = edge_colors,  nodecolor=node_colors, curvature = 0.01, kwargs...)
+    g = graphplot(W(layer), names=nm,nodesize=0.2,method = :circular, nodeshape = :circle,  edgecolor = edge_colors,  nodecolor=node_colors, curvature = 0.01, title="t=$(layer)", kwargs...)
     plot(g, dpi=300)
 end 
 
