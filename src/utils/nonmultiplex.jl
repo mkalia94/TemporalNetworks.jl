@@ -50,10 +50,15 @@ function _embed_compressed_evecs(graph :: MultilayerGraph{M}, vecs :: Matrix{Flo
     evecs_embed
 end
 
-function lift_matrix_nonmultiplex(mat :: Matrix{Float64}, mlgraph :: MultilayerGraph)
+function lift_matrix_nonmultiplex(mat :: Union{Matrix, SparseMatrixCSC}, mlgraph :: MultilayerGraph)
     inds_active = find_active(mlgraph)
     inds_active = vcat([x .+ (i-1)*mlgraph.N for (i,x) in enumerate(inds_active)]...)
-    lift_mat = zeros(mlgraph.N*mlgraph.T, mlgraph.N*mlgraph.T)
+    
+    if typeof(mat) <: Matrix
+        lift_mat = zeros(mlgraph.N*mlgraph.T, mlgraph.N*mlgraph.T)
+    else
+        lift_mat = spzeros(mlgraph.N*mlgraph.T, mlgraph.N*mlgraph.T)
+    end
     lift_mat[inds_active, inds_active] = mat
     lift_mat
 end
@@ -77,5 +82,3 @@ function isspat(mlgraph :: MultilayerGraph{A}, norm :: Normalization,  L_spat, L
     evecs = _embed_compressed_evecs(mlgraph, evecs, Array(1:size(evecs)[2]), 0.0)
     _isspat_nonmultiplex(mlgraph, evecs[:,ind], indx = indx)
 end
-
-

@@ -10,7 +10,7 @@ function plot(mlgraph :: MultilayerGraph{T}, layer :: Int64; labels = nothing, k
     edge_color!(W, mlgraph.T, layer, edge_colors) 
     node_colors = isnothing(labels) ? Int64.(ones(length(ind_active))) :  color_vector(Int64.(labels[:,layer]))[ind_active]
     
-    g = graphplot(W(layer), names=nm,nodesize=0.2,method = :circular, nodeshape = :circle,  edgecolor = edge_colors,  nodecolor=node_colors, curvature = 0.01, kwargs...)
+    g = graphplot(W(layer), names=nm,nodesize=0.2,method = :circular, nodeshape = :circle,  edgecolor = edge_colors,  nodecolor=node_colors, curvature = 0.01, title="t=$(layer)", kwargs...)
     plot(g, dpi=300)
 end 
 
@@ -79,14 +79,16 @@ function _plot_eigs(partition :: SpectralPartition{MultilayerGraph{T}, N}, R) wh
     p5
 end
 
-function _plot_eigs(partition :: SpectralPartition{MultilayerGraph{T}, N}, R) where {T, N}
-    scatter(partition.evals[1:20], title=L"\textrm{Eigenvalues } \ \Lambda_{k,a} \ \textrm{ vs } \ k ")
-end
-
-function _vecs_to_plot(partition :: SpectralPartition, N=10; vecs = nothing, clims = nothing, kwargs...) 
-    vecs_to_plot = isnothing(vecs) ? Array(1:N) : vecs
+function _vecs_to_plot(partition :: SpectralPartition{MultilayerGraph{T}, N}; vecs = nothing, clims = nothing, kwargs...) where {T <: NonMultiplex, N <: Normalization}
+    vecs_to_plot = isnothing(vecs) ? Array(1:10) : vecs
     return vecs_to_plot, partition.evecs[:, vecs_to_plot]
 end
+
+function _vecs_to_plot(partition :: SpectralPartition{MultilayerGraph{T}, N}; vecs = nothing, clims = nothing, kwargs...) where {T <: Multiplex, N <: Normalization}
+    vecs_to_plot = isnothing(vecs) ? Array(1:10) : vecs
+    return vecs_to_plot, partition.evecs[:, vecs_to_plot]
+end
+
 
 function plot(spart :: SEBAPartition{MultilayerGraph{T}, N}; kwargs...) where {T<: Multiplex, N}
     _plot_SEBA(spart), _plot_SEBA_trend(spart, 5)
@@ -162,4 +164,3 @@ function _plot_SEBA_heatmapmax(spart :: SEBAPartition, good_SEBA :: Vector{Int64
 
     p, vals, max_inds
 end
-

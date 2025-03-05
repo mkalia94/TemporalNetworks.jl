@@ -1,4 +1,4 @@
-function directsum(vec) # vector of matrices
+function directsum(vec :: Vector{Matrix}) # vector of matrices
     M = length(vec)
     N = [size(vec[i])[1] for i in 1:M]
     W = zeros(sum(N),sum(N))
@@ -11,15 +11,37 @@ function directsum(vec) # vector of matrices
     W
 end
 
+function directsum(vec :: Vector{SparseMatrixCSC})
+    M = length(vec)
+    N = [vec[i].n for i in 1:M]
+    W = spzeros(sum(N),sum(N))
+    ctr = 0
+    for i in 1:M
+        W[ctr+1:ctr + N[i],ctr+1:ctr + N[i]] = vec[i]
+        ctr = ctr + N[i]
+    end
+    W
+end
+
+
+
 function lap(W :: Matrix{Float64})
     return diagm(sum(abs.(W),dims=1)[1,:]) - W
+end
+
+function lap(W :: SparseMatrixCSC)
+    return spdiagm(sum(abs.(W), dims=1)[1,:]) - W
 end
 
 function adj(L :: Matrix{Float64})
     diagm(diag(L)) .- L
 end
 
-function edgelist(W :: Matrix{Float64})
+function adj(L :: SparseMatrixCSC)
+    spdiagm(diag(L)) .- L
+end
+
+function edgelist(W :: Union{Matrix, SparseMatrixCSC})
     edges = []
     for i in 1: size(W)[1], j in 1:size(W)[2]
         if W[i,j] > 0

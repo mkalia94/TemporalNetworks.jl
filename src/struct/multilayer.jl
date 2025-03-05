@@ -4,7 +4,7 @@
 The temporal network instance. Stores sequence of adjacencies `W`, nodes per layer `N`, number of layers `T` and the connectivity of abstract type `TemporalConnectivity`. Default is `Multiplex()`, other options include `NonMultiplexCompressed()`. 
 """
 mutable struct MultilayerGraph{M <: TemporalConnectivity}
-    W :: Vector{Matrix{Float64}}
+    W :: Union{Vector{Matrix{Float64}}, Vector{SparseMatrixCSC}}
     N :: Union{Int64, Float64}
     T :: Int64
     connect :: M
@@ -31,7 +31,12 @@ function (ff::Multiplex)(mlgraph :: MultilayerGraph)
             Wt[i,j] = 1.0
         end
     end
-    directsum(mlgraph.W), kron(Wt, Matrix{Float64}(I, mlgraph.N, mlgraph.N))
+
+    if typeof(mlgraph.W) <: Vector{SparseMatrixCSC}
+        return directsum(mlgraph.W), kron(sparse(Wt), sparse(Float64, I, mlgraph.N, mlgraph.N))
+    else
+        return directsum(mlgraph.W), kron(Wt, Matrix{Float64}(I, mlgraph.N, mlgraph.N))
+    end
 end
 
 
