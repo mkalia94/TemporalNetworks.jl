@@ -1,7 +1,7 @@
 function (::NonMultiplexCompressed)(mlgraph)
     ind_active = find_active(mlgraph)
     W_spat = [mlgraph.W[i][ind_active[i], ind_active[i]] for i in 1:mlgraph.T]
-    W_spat_full = directsum(W_spat)
+    W_spat_full = directsum(typeof(mlgraph.W)(W_spat))
 
     # Wtemp
     ctr = 0
