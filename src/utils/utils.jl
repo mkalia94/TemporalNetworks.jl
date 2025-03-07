@@ -1,4 +1,4 @@
-function directsum(vec) # vector of matrices
+function directsum(vec :: Vector) # vector of matrices
     M = length(vec)
     N = [size(vec[i])[1] for i in 1:M]
     W = zeros(sum(N),sum(N))
