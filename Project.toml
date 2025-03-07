@@ -1,7 +1,6 @@
 name = "TemporalNetworks"
 uuid = "8c7a6a83-a663-42fb-a24a-c426533903ed"
 authors = ["Manu Kalia"]
-version = "1.0.0"
 
 [deps]
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
