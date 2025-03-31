@@ -35,7 +35,7 @@ StatsPlots = "f3b207a7-027a-5e70-b257-86293d7955fd"
 
 [compat]
 CSV = "0.10.14"
-Colors = "0.12.11"
+Colors = "0.12.11, 0.13"
 CondaPkg = "0.2.23"
 DataFrames = "1.6.1"
 Documenter = "1.5.0"
